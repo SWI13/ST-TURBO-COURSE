@@ -1,0 +1,41 @@
+// انسخ هذا الكود إلى Google Apps Script المرتبط بجدول البيانات (Google Sheet)
+// راجع README.md لخطوات الإنشاء والنشر الكاملة.
+
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var params = e.parameter;
+
+    ensureHeaderRow(sheet);
+
+    sheet.appendRow([
+      new Date(),
+      params.name || '',
+      params.phone || '',
+      params.email || '',
+      params.course || '',
+      params.notes || ''
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'error', message: err.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function ensureHeaderRow(sheet) {
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(['التاريخ', 'الاسم', 'الهاتف', 'البريد الإلكتروني', 'الدورة', 'ملاحظات']);
+  }
+}

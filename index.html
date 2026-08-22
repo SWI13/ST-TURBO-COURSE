@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية التربو والميكانيكا | دورات احترافية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">TURBO<span>ACADEMY</span></div>
+    <nav>
+      <a href="#courses">الدورات</a>
+      <a href="#why-us">لماذا نحن</a>
+      <a href="#signup" class="nav-cta">سجّل الآن</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>احترف عالم <span class="highlight">التربو وميكانيكا السيارات</span></h1>
+    <p>دورات عملية 100% تأخذك من الصفر إلى الاحتراف، على يد مدربين بخبرة ميدانية حقيقية.</p>
+    <a href="#signup" class="btn-primary">احجز مقعدك الآن</a>
+  </div>
+</section>
+
+<section class="courses" id="courses">
+  <div class="container">
+    <h2 class="section-title">دوراتنا</h2>
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <div class="course-icon">🔧</div>
+        <div class="course-name">أساسيات ميكانيكا السيارات</div>
+        <p class="course-desc">من الصفر: فهم مكونات السيارة وقراءة الأعطال الشائعة.</p>
+        <div class="course-duration">4 أسابيع</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🌀</div>
+        <div class="course-name">أنظمة التربو (Turbocharger)</div>
+        <p class="course-desc">آلية عمل التربو، أعطاله الشائعة، وطرق صيانته وإصلاحه.</p>
+        <div class="course-duration">3 أسابيع</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">💻</div>
+        <div class="course-name">تشخيص الأعطال بالكمبيوتر</div>
+        <p class="course-desc">استخدام أجهزة الفحص (OBD) لتشخيص الأعطال باحترافية.</p>
+        <div class="course-duration">3 أسابيع</div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">⚙️</div>
+        <div class="course-name">تعديل وتقوية المحركات</div>
+        <p class="course-desc">ريماب ECU، ترقية التربو، وبناء محركات عالية الأداء.</p>
+        <div class="course-duration">5 أسابيع</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="why-us" id="why-us">
+  <div class="container">
+    <h2 class="section-title">لماذا تختار أكاديميتنا؟</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">🏆</div>
+        <p>مدربون بخبرة ميدانية حقيقية</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">🚗</div>
+        <p>تدريب عملي 100% على سيارات حقيقية</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">🛠️</div>
+        <p>ورش مجهزة بأحدث أجهزة التشخيص</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">📜</div>
+        <p>شهادة معتمدة عند التخرج</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="signup" id="signup">
+  <div class="container">
+    <h2 class="section-title">سجّل بياناتك وسنتواصل معك</h2>
+
+    <form id="signupForm" class="signup-form" method="POST" target="hidden_iframe">
+      <div class="form-row">
+        <label for="name">الاسم الكامل *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">رقم الهاتف *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-row">
+        <label for="course">الدورة المهتم بها *</label>
+        <select id="course" name="course" required>
+          <option value="">اختر دورة</option>
+          <option value="أساسيات ميكانيكا السيارات">أساسيات ميكانيكا السيارات</option>
+          <option value="أنظمة التربو">أنظمة التربو (Turbocharger)</option>
+          <option value="تشخيص الأعطال بالكمبيوتر">تشخيص الأعطال بالكمبيوتر</option>
+          <option value="تعديل وتقوية المحركات">تعديل وتقوية المحركات</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="notes">ملاحظات إضافية</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn-primary">إرسال</button>
+
+      <p id="formMessage" class="form-message"></p>
+    </form>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 أكاديمية التربو والميكانيكا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
