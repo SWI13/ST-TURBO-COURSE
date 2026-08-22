@@ -37,6 +37,13 @@ function doPost(e) {
   }
 }
 
+// زيارة رابط الـ Web App في المتصفح تستدعي هذه الدالة — للتأكد أن النشر يعمل.
+function doGet() {
+  return ContentService
+    .createTextOutput(JSON.stringify({ result: 'ok', message: 'SM TURBO endpoint is live' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 function ensureHeaderRow(sheet) {
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(['التاريخ', 'الاسم', 'الهاتف', 'البريد الإلكتروني', 'الدورة', 'مدة الخبرة', 'عمل من قبل', 'شهادة من مركز تكوين', 'ملاحظات']);

@@ -33,7 +33,7 @@ function setupBackToTop() {
 
   window.addEventListener('scroll', () => {
     btn.classList.toggle('visible', window.scrollY > 500);
-  });
+  }, { passive: true });
 
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -121,12 +121,32 @@ function setupChoiceGroups() {
 
     group.querySelectorAll('.choice-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
-        group.querySelectorAll('.choice-btn').forEach((b) => b.classList.remove('selected'));
+        group.querySelectorAll('.choice-btn').forEach((b) => {
+          b.classList.remove('selected');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('selected');
+        btn.setAttribute('aria-pressed', 'true');
         hiddenInput.value = btn.dataset.value;
         group.classList.remove('invalid');
       });
     });
+  });
+}
+
+// form.reset() restores inputs to their value attribute, and these hidden inputs
+// are filled by JS (no attribute), so their values survive a reset. Clearing them
+// explicitly prevents the next submission from carrying the previous answers.
+function clearChoiceSelections(form) {
+  form.querySelectorAll('.choice-btn').forEach((btn) => {
+    btn.classList.remove('selected');
+    btn.setAttribute('aria-pressed', 'false');
+  });
+
+  form.querySelectorAll('.choice-group').forEach((group) => {
+    group.classList.remove('invalid');
+    const hiddenInput = group.parentElement.querySelector('input[type="hidden"]');
+    if (hiddenInput) hiddenInput.value = '';
   });
 }
 
@@ -139,6 +159,12 @@ function setupForm() {
   form.action = APPS_SCRIPT_URL;
 
   let submitted = false;
+  let timeoutId = null;
+
+  const resetButton = () => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "إرسال";
+  };
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -147,6 +173,7 @@ function setupForm() {
     if (!validateForm(form)) {
       message.textContent = "الرجاء تصحيح الحقول المظللة.";
       message.className = "form-message error";
+      focusFirstInvalid(form);
       return;
     }
 
@@ -162,17 +189,40 @@ function setupForm() {
     message.textContent = "";
     message.className = "form-message";
     form.submit();
+
+    // إن لم يستجب الخادم، لا نترك الزر معطّلاً إلى الأبد
+    timeoutId = window.setTimeout(() => {
+      if (!submitted) return;
+      submitted = false;
+      resetButton();
+      message.textContent = "تعذّر الإرسال. تحقّق من اتصالك وحاول مرة أخرى.";
+      message.className = "form-message error";
+    }, 20000);
   });
 
   iframe.addEventListener('load', () => {
     if (!submitted) return; // يتجاهل أول تحميل فارغ للـ iframe عند فتح الصفحة
     submitted = false;
-    submitBtn.disabled = false;
-    submitBtn.textContent = "إرسال";
+    window.clearTimeout(timeoutId);
+    resetButton();
     form.reset();
+    clearChoiceSelections(form);
     message.textContent = "تم إرسال بياناتك بنجاح! سنتواصل معك قريباً.";
     message.className = "form-message success";
   });
+}
+
+function focusFirstInvalid(form) {
+  // نقصر البحث على عناصر الإدخال: مجموعات الاختيار تحمل نفس الصنف وهي غير قابلة للتركيز
+  const firstInvalid = form.querySelector('input.invalid, select.invalid, textarea.invalid');
+  if (!firstInvalid) return;
+
+  // الحقول المخفية لا تقبل التركيز — ننتقل إلى أول زر في مجموعة الاختيار
+  const target = firstInvalid.type === 'hidden'
+    ? firstInvalid.parentElement.querySelector('.choice-btn')
+    : firstInvalid;
+
+  if (target) target.focus();
 }
 
 function validateForm(form) {

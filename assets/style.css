@@ -184,9 +184,10 @@ nav a:hover { color: var(--blue); }
   gap: 50px;
   flex-wrap: wrap-reverse;
 }
-.hero-content { flex: 1 1 420px; min-width: 280px; }
-
-.hero-visual { flex: 1 1 400px; max-width: 440px; }
+/* min-width:0 lets these shrink below their flex-basis instead of being
+   pinned to it — keeps the hero safe on very narrow screens. */
+.hero-content { flex: 1 1 420px; min-width: 0; }
+.hero-visual { flex: 1 1 400px; min-width: 0; max-width: min(440px, 100%); }
 
 /* keyframe kept: also used by the course card's hover icon */
 @keyframes spin-turbo {
@@ -658,4 +659,8 @@ nav a:hover { color: var(--blue); }
 
 @media (max-width: 600px) {
   .hero { padding: 70px 0 60px; }
+  .hero-stats { gap: 28px; margin-top: 36px; }
+  .hero-inner { gap: 34px; }
+  .course-panel { padding: 28px 20px; }
+  .signup-form { padding: 26px 20px; }
 }
