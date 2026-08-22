@@ -17,6 +17,9 @@ function doPost(e) {
       params.phone || '',
       params.email || '',
       params.course || '',
+      params.experience || '',
+      params.workedBefore || '',
+      params.hasCertificate || '',
       params.notes || ''
     ]);
 
@@ -36,6 +39,6 @@ function doPost(e) {
 
 function ensureHeaderRow(sheet) {
   if (sheet.getLastRow() === 0) {
-    sheet.appendRow(['التاريخ', 'الاسم', 'الهاتف', 'البريد الإلكتروني', 'الدورة', 'ملاحظات']);
+    sheet.appendRow(['التاريخ', 'الاسم', 'الهاتف', 'البريد الإلكتروني', 'الدورة', 'مدة الخبرة', 'عمل من قبل', 'شهادة من مركز تكوين', 'ملاحظات']);
   }
 }

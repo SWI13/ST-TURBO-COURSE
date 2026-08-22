@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCounters();
   setupFaq();
   setupCourseButtons();
+  setupChoiceGroups();
   setupForm();
 });
 
@@ -134,6 +135,22 @@ function setupCourseButtons() {
   });
 }
 
+function setupChoiceGroups() {
+  document.querySelectorAll('.choice-group').forEach((group) => {
+    const hiddenInput = group.parentElement.querySelector('input[type="hidden"]');
+    if (!hiddenInput) return;
+
+    group.querySelectorAll('.choice-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.choice-btn').forEach((b) => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        hiddenInput.value = btn.dataset.value;
+        group.classList.remove('invalid');
+      });
+    });
+  });
+}
+
 function setupForm() {
   const form = document.getElementById('signupForm');
   const iframe = document.getElementById('hidden_iframe');
@@ -200,6 +217,12 @@ function validateForm(form) {
 
 function setFieldError(field, text) {
   field.classList.add('invalid');
+
+  if (field.type === 'hidden') {
+    const group = field.parentElement.querySelector('.choice-group');
+    if (group) group.classList.add('invalid');
+  }
+
   const errorEl = field.closest('.form-row').querySelector('.field-error');
   if (errorEl) errorEl.textContent = text;
 }

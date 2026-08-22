@@ -494,6 +494,33 @@ nav a:hover { color: var(--blue); }
   font-size: 13px;
   min-height: 16px;
 }
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-radius: 10px;
+  transition: box-shadow 0.2s;
+}
+.choice-group.invalid { box-shadow: 0 0 0 1px var(--red); padding: 4px; }
+.choice-btn {
+  background-color: #000;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 10px 16px;
+  min-height: 44px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+.choice-btn:hover { border-color: var(--blue); }
+.choice-btn.selected {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: #000;
+  font-weight: 700;
+}
 .signup-form .btn-primary { width: 100%; justify-content: center; }
 .form-message {
   text-align: center;

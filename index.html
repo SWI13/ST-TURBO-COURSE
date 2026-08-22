@@ -71,16 +71,29 @@
       <circle cx="17.5" cy="15.5" r="3"/>
       <path d="M15.8 18.1 14.5 21.5 17.5 19.8 20.5 21.5 19.2 18.1"/>
     </symbol>
-    <symbol id="icon-layers" viewBox="0 0 24 24">
-      <path d="M12 3 21 8 12 13 3 8Z"/>
-      <path d="M3 13 12 18 21 13"/>
-    </symbol>
     <symbol id="icon-chevron-down" viewBox="0 0 24 24">
       <path d="M6 9 12 15 18 9"/>
     </symbol>
     <symbol id="icon-arrow-up" viewBox="0 0 24 24">
       <path d="M12 19V5"/>
       <path d="M6 11 12 5 18 11"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3.5 2"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M5 13 9.5 17.5 19 7"/>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="11" rx="2"/>
+      <path d="M8 16 6.5 20 11.5 16"/>
+    </symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24">
+      <path d="M12 2 14 10 22 12 14 14 12 22 10 14 2 12 10 10Z"/>
+    </symbol>
+    <symbol id="icon-droplet" viewBox="0 0 24 24">
+      <path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/>
     </symbol>
   </defs>
 </svg>
@@ -164,7 +177,7 @@
           <span class="course-tag">أدوات القياس</span>
         </div>
         <div class="course-duration">
-          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-clock"/></svg>
           4 أسابيع
         </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
@@ -181,7 +194,7 @@
           <span class="course-tag">تركيب واستبدال</span>
         </div>
         <div class="course-duration">
-          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-clock"/></svg>
           3 أسابيع
         </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
@@ -197,7 +210,7 @@
           <span class="course-tag">تحليل البيانات</span>
         </div>
         <div class="course-duration">
-          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-clock"/></svg>
           3 أسابيع
         </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
@@ -213,7 +226,7 @@
           <span class="course-tag">محركات الأداء</span>
         </div>
         <div class="course-duration">
-          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-clock"/></svg>
           5 أسابيع
         </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
@@ -242,7 +255,7 @@
       </div>
       <div class="why-item reveal">
         <div class="why-icon"><svg class="icon"><use href="#icon-certificate"/></svg></div>
-        <p>شهادة معتمدة عند التخرج</p>
+        <p>شهادة دولة معتمدة بشراكة مع المعهد العالي نيسي برو للتكوين</p>
       </div>
     </div>
   </div>
@@ -280,7 +293,7 @@
           <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">
-          نعم، يحصل كل متدرب على شهادة معتمدة عند إتمام الدورة بنجاح.
+          نعم، بموجب شراكة رسمية مع المعهد العالي (نيسي برو) للتكوين (رقم الاعتماد 2025/09)، يحصل كل متدرب على شهادة دولة معتمدة عند إتمام الدورة بنجاح.
         </div></div>
       </div>
 
@@ -342,6 +355,38 @@
           <option value="تعديل وتقوية المحركات">تعديل وتقوية المحركات</option>
         </select>
         <span class="field-error" data-error-for="course"></span>
+      </div>
+
+      <div class="form-row">
+        <label id="experienceLabel">مدة الخبرة *</label>
+        <div class="choice-group" role="group" aria-labelledby="experienceLabel">
+          <button type="button" class="choice-btn" data-value="بدون خبرة">بدون خبرة</button>
+          <button type="button" class="choice-btn" data-value="أقل من سنة">أقل من سنة</button>
+          <button type="button" class="choice-btn" data-value="1 - 3 سنوات">1 - 3 سنوات</button>
+          <button type="button" class="choice-btn" data-value="أكثر من 3 سنوات">أكثر من 3 سنوات</button>
+        </div>
+        <input type="hidden" id="experience" name="experience" required>
+        <span class="field-error" data-error-for="experience"></span>
+      </div>
+
+      <div class="form-row">
+        <label id="workedBeforeLabel">هل عملت من قبل في هذا المجال؟ *</label>
+        <div class="choice-group" role="group" aria-labelledby="workedBeforeLabel">
+          <button type="button" class="choice-btn" data-value="نعم">نعم</button>
+          <button type="button" class="choice-btn" data-value="لا">لا</button>
+        </div>
+        <input type="hidden" id="workedBefore" name="workedBefore" required>
+        <span class="field-error" data-error-for="workedBefore"></span>
+      </div>
+
+      <div class="form-row">
+        <label id="hasCertificateLabel">هل أنت متحصل على شهادة من مركز تكوين؟ *</label>
+        <div class="choice-group" role="group" aria-labelledby="hasCertificateLabel">
+          <button type="button" class="choice-btn" data-value="نعم">نعم</button>
+          <button type="button" class="choice-btn" data-value="لا">لا</button>
+        </div>
+        <input type="hidden" id="hasCertificate" name="hasCertificate" required>
+        <span class="field-error" data-error-for="hasCertificate"></span>
       </div>
 
       <div class="form-row">
