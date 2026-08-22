@@ -1,5 +1,5 @@
-// ضع هنا رابط Google Apps Script Web App بعد نشره (اتبع خطوات README.md)
-const APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+// رابط Google Apps Script Web App — عند إعادة نشر السكربت، حدّث هذا الرابط.
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxu7_MuvZdjhRsAU-8ZirCkzZDomDKJFIWu78bf5WASLOloHVrHLQteLTSQ5y6wurN6/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
   setupNav();
