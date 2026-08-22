@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupReveal();
   setupCounters();
   setupFaq();
-  setupCourseButtons();
   setupChoiceGroups();
   setupForm();
 });
@@ -111,26 +110,6 @@ function setupFaq() {
       const isOpen = item.getAttribute('data-open') === 'true';
       item.setAttribute('data-open', isOpen ? 'false' : 'true');
       question.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-    });
-  });
-}
-
-function setupCourseButtons() {
-  const courseSelect = document.getElementById('course');
-  const nameInput = document.getElementById('name');
-
-  document.querySelectorAll('.course-select').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.course-card');
-      const courseName = card.querySelector('.course-name').textContent.trim();
-
-      const match = Array.from(courseSelect.options).find(
-        (opt) => courseName.startsWith(opt.value) || opt.value === courseName
-      );
-      if (match) courseSelect.value = match.value;
-
-      document.getElementById('signup').scrollIntoView({ behavior: 'smooth' });
-      window.setTimeout(() => nameInput.focus(), 400);
     });
   });
 }
