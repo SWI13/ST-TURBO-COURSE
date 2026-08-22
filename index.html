@@ -4,14 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SM TURBO — أكاديمية تكوين في ميكانيكا السيارات وأنظمة التربو بولاية باتنة، بخبرة عملية تطبيقية تفوق 40 سنة.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#060608">
 <title>SM TURBO | دورات ميكانيكا وتربو - ولاية باتنة</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23ff0000' stroke-width='4'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle'%3E%F0%9F%94%A7%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+<!-- Icon sprite: inline SVG symbols (no emoji, no external icon library) -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24">
+      <path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/>
+      <circle cx="12" cy="10" r="2.4"/>
+    </symbol>
+    <symbol id="icon-wrench" viewBox="0 0 24 24">
+      <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2-2 2.1-2.1Z"/>
+    </symbol>
+    <symbol id="icon-turbine" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="2"/>
+      <path d="M12 12 C12 7 15 5 18 6 C16 8 14 10 12 12 Z"/>
+      <path d="M12 12 C7 12 5 9 6 6 C8 8 10 10 12 12 Z"/>
+      <path d="M12 12 C12 17 9 19 6 18 C8 16 10 14 12 12 Z"/>
+      <path d="M12 12 C17 12 19 15 18 18 C16 16 14 14 12 12 Z"/>
+    </symbol>
+    <symbol id="icon-cpu" viewBox="0 0 24 24">
+      <rect x="7" y="7" width="10" height="10" rx="1"/>
+      <rect x="10" y="10" width="4" height="4"/>
+      <line x1="9" y1="7" x2="9" y2="4"/>
+      <line x1="15" y1="7" x2="15" y2="4"/>
+      <line x1="9" y1="17" x2="9" y2="20"/>
+      <line x1="15" y1="17" x2="15" y2="20"/>
+      <line x1="7" y1="9" x2="4" y2="9"/>
+      <line x1="7" y1="15" x2="4" y2="15"/>
+      <line x1="17" y1="9" x2="20" y2="9"/>
+      <line x1="17" y1="15" x2="20" y2="15"/>
+    </symbol>
+    <symbol id="icon-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/>
+      <line x1="12" y1="5" x2="12" y2="2.3"/>
+      <line x1="12" y1="19" x2="12" y2="21.7"/>
+      <line x1="5" y1="12" x2="2.3" y2="12"/>
+      <line x1="19" y1="12" x2="21.7" y2="12"/>
+      <line x1="7.05" y1="7.05" x2="5.14" y2="5.14"/>
+      <line x1="16.95" y1="16.95" x2="18.86" y2="18.86"/>
+      <line x1="16.95" y1="7.05" x2="18.86" y2="5.14"/>
+      <line x1="7.05" y1="16.95" x2="5.14" y2="18.86"/>
+    </symbol>
+    <symbol id="icon-badge" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="5.2"/>
+      <path d="M8 13 6.5 20 12 17.5 17.5 20 16 13"/>
+    </symbol>
+    <symbol id="icon-toolbox" viewBox="0 0 24 24">
+      <rect x="4" y="10" width="16" height="9" rx="1.5"/>
+      <path d="M9 10V7.5a3 3 0 0 1 6 0V10"/>
+      <line x1="4" y1="14.5" x2="20" y2="14.5"/>
+    </symbol>
+    <symbol id="icon-certificate" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="12" height="15" rx="1"/>
+      <line x1="6.5" y1="7" x2="13.5" y2="7"/>
+      <line x1="6.5" y1="10" x2="13.5" y2="10"/>
+      <line x1="6.5" y1="13" x2="11" y2="13"/>
+      <circle cx="17.5" cy="15.5" r="3"/>
+      <path d="M15.8 18.1 14.5 21.5 17.5 19.8 20.5 21.5 19.2 18.1"/>
+    </symbol>
+    <symbol id="icon-layers" viewBox="0 0 24 24">
+      <path d="M12 3 21 8 12 13 3 8Z"/>
+      <path d="M3 13 12 18 21 13"/>
+    </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <path d="M6 9 12 15 18 9"/>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <path d="M12 19V5"/>
+      <path d="M6 11 12 5 18 11"/>
+    </symbol>
+  </defs>
+</svg>
 
 <a href="#main" class="skip-link">تخطَّ إلى المحتوى</a>
 
@@ -27,6 +99,7 @@
       <a href="#about">من نحن</a>
       <a href="#courses">الدورات</a>
       <a href="#why-us">لماذا نحن</a>
+      <a href="#faq">الأسئلة الشائعة</a>
       <a href="#signup" class="nav-cta">سجّل الآن</a>
     </nav>
   </div>
@@ -36,7 +109,10 @@
 
 <section class="hero">
   <div class="container hero-inner">
-    <span class="hero-badge reveal">📍 SM TURBO · ولاية باتنة</span>
+    <span class="hero-badge reveal">
+      <svg class="icon" style="width:14px;height:14px"><use href="#icon-map-pin"/></svg>
+      SM TURBO · ولاية باتنة
+    </span>
     <h1 class="reveal">احترف عالم <span class="highlight">التربو وميكانيكا السيارات</span></h1>
     <p class="reveal">دورات عملية 100% تأخذك من الصفر إلى الاحتراف، بخبرة عملية تطبيقية تمتد لأكثر من 40 سنة، في ولاية باتنة.</p>
     <div class="hero-actions reveal">
@@ -45,15 +121,15 @@
     </div>
     <div class="hero-stats reveal">
       <div class="hero-stat">
-        <div class="hero-stat-value">+40</div>
+        <div class="hero-stat-value"><span class="counter" data-target="40" data-suffix="+">0</span></div>
         <div class="hero-stat-label">سنة خبرة عملية تطبيقية</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">4</div>
+        <div class="hero-stat-value"><span class="counter" data-target="4">0</span></div>
         <div class="hero-stat-label">دورات تخصصية</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">100%</div>
+        <div class="hero-stat-value"><span class="counter" data-target="100" data-suffix="%">0</span></div>
         <div class="hero-stat-label">تدريب عملي</div>
       </div>
     </div>
@@ -62,7 +138,8 @@
 
 <section class="about" id="about">
   <div class="container about-inner reveal">
-    <h2 class="section-title">من نحن</h2>
+    <span class="section-eyebrow">من نحن</span>
+    <h2 class="section-title">SM TURBO</h2>
     <p>
       SM TURBO هي مؤسسة تكوين متخصصة في ميكانيكا السيارات وأنظمة التربو، مقرها ولاية باتنة.
       نقدّم تكوينًا عمليًا 100% مبنيًا على خبرة ميدانية تطبيقية تمتد لأكثر من 40 سنة في المجال،
@@ -73,39 +150,72 @@
 
 <section class="courses" id="courses">
   <div class="container">
+    <span class="section-eyebrow reveal">الدورات</span>
     <h2 class="section-title reveal">دوراتنا</h2>
     <div class="courses-grid">
 
-      <div class="course-card reveal">
-        <div class="course-icon">🔧</div>
+      <div class="course-card tech-corners reveal">
+        <div class="course-icon"><svg class="icon"><use href="#icon-wrench"/></svg></div>
         <div class="course-name">أساسيات ميكانيكا السيارات</div>
         <p class="course-desc">من الصفر: فهم مكونات السيارة وقراءة الأعطال الشائعة.</p>
-        <div class="course-duration">4 أسابيع</div>
+        <div class="course-tags">
+          <span class="course-tag">قراءة الأعطال</span>
+          <span class="course-tag">مكونات المحرك</span>
+          <span class="course-tag">أدوات القياس</span>
+        </div>
+        <div class="course-duration">
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          4 أسابيع
+        </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
-      <div class="course-card reveal">
+      <div class="course-card tech-corners reveal">
         <div class="course-badge">الأكثر طلبًا</div>
-        <div class="course-icon">🌀</div>
+        <div class="course-icon"><svg class="icon"><use href="#icon-turbine"/></svg></div>
         <div class="course-name">أنظمة التربو (Turbocharger)</div>
         <p class="course-desc">آلية عمل التربو، أعطاله الشائعة، وطرق صيانته وإصلاحه.</p>
-        <div class="course-duration">3 أسابيع</div>
+        <div class="course-tags">
+          <span class="course-tag">صيانة التربو</span>
+          <span class="course-tag">تشخيص الأعطال</span>
+          <span class="course-tag">تركيب واستبدال</span>
+        </div>
+        <div class="course-duration">
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          3 أسابيع
+        </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
-      <div class="course-card reveal">
-        <div class="course-icon">💻</div>
+      <div class="course-card tech-corners reveal">
+        <div class="course-icon"><svg class="icon"><use href="#icon-cpu"/></svg></div>
         <div class="course-name">تشخيص الأعطال بالكمبيوتر</div>
         <p class="course-desc">استخدام أجهزة الفحص (OBD) لتشخيص الأعطال باحترافية.</p>
-        <div class="course-duration">3 أسابيع</div>
+        <div class="course-tags">
+          <span class="course-tag">أجهزة OBD</span>
+          <span class="course-tag">قراءة الأكواد</span>
+          <span class="course-tag">تحليل البيانات</span>
+        </div>
+        <div class="course-duration">
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          3 أسابيع
+        </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
-      <div class="course-card reveal">
-        <div class="course-icon">⚙️</div>
+      <div class="course-card tech-corners reveal">
+        <div class="course-icon"><svg class="icon"><use href="#icon-gear"/></svg></div>
         <div class="course-name">تعديل وتقوية المحركات</div>
         <p class="course-desc">ريماب ECU، ترقية التربو، وبناء محركات عالية الأداء.</p>
-        <div class="course-duration">5 أسابيع</div>
+        <div class="course-tags">
+          <span class="course-tag">ريماب ECU</span>
+          <span class="course-tag">ترقية التربو</span>
+          <span class="course-tag">محركات الأداء</span>
+        </div>
+        <div class="course-duration">
+          <svg class="icon" style="width:13px;height:13px"><use href="#icon-layers"/></svg>
+          5 أسابيع
+        </div>
         <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
@@ -115,33 +225,95 @@
 
 <section class="why-us" id="why-us">
   <div class="container">
+    <span class="section-eyebrow reveal">المزايا</span>
     <h2 class="section-title reveal">لماذا تختار SM TURBO؟</h2>
     <div class="why-grid">
       <div class="why-item reveal">
-        <div class="why-icon">🏆</div>
+        <div class="why-icon"><svg class="icon"><use href="#icon-badge"/></svg></div>
         <p>خبرة عملية تطبيقية تفوق 40 سنة</p>
       </div>
       <div class="why-item reveal">
-        <div class="why-icon">🚗</div>
+        <div class="why-icon"><svg class="icon"><use href="#icon-toolbox"/></svg></div>
         <p>تدريب عملي 100% على سيارات حقيقية</p>
       </div>
       <div class="why-item reveal">
-        <div class="why-icon">🛠️</div>
+        <div class="why-icon"><svg class="icon"><use href="#icon-cpu"/></svg></div>
         <p>ورش مجهزة بأحدث أجهزة التشخيص</p>
       </div>
       <div class="why-item reveal">
-        <div class="why-icon">📜</div>
+        <div class="why-icon"><svg class="icon"><use href="#icon-certificate"/></svg></div>
         <p>شهادة معتمدة عند التخرج</p>
       </div>
     </div>
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="container">
+    <span class="section-eyebrow reveal">الأسئلة الشائعة</span>
+    <h2 class="section-title reveal">قد يهمك معرفته</h2>
+    <div class="faq-list">
+
+      <div class="faq-item reveal" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">
+          هل هذه الدورات مناسبة للمبتدئين؟
+          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          نعم، دورة "أساسيات ميكانيكا السيارات" مصممة خصيصًا للبدء من الصفر، ولا تشترط أي خبرة سابقة.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">
+          أين تُقام الدورات؟
+          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          جميع الدورات تُقام حضوريًا في ولاية باتنة.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">
+          هل أحصل على شهادة بعد إتمام الدورة؟
+          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          نعم، يحصل كل متدرب على شهادة معتمدة عند إتمام الدورة بنجاح.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">
+          هل التدريب عملي أم نظري فقط؟
+          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          التدريب عملي بنسبة 100%، على سيارات وأجهزة تشخيص حقيقية.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">
+          كيف أسجل في إحدى الدورات؟
+          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          عبر تعبئة نموذج التسجيل أدناه، وسنتواصل معك لتأكيد التفاصيل.
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="signup" id="signup">
   <div class="container">
+    <span class="section-eyebrow reveal">التسجيل</span>
     <h2 class="section-title reveal">سجّل بياناتك وسنتواصل معك</h2>
 
-    <form id="signupForm" class="signup-form reveal" method="POST" target="hidden_iframe" novalidate>
+    <form id="signupForm" class="signup-form tech-corners reveal" method="POST" target="hidden_iframe" novalidate>
       <div class="form-row">
         <label for="name">الاسم الكامل *</label>
         <input type="text" id="name" name="name" autocomplete="name" required>
@@ -195,13 +367,16 @@
       <a href="#about">من نحن</a>
       <a href="#courses">الدورات</a>
       <a href="#why-us">لماذا نحن</a>
+      <a href="#faq">الأسئلة الشائعة</a>
       <a href="#signup">سجّل الآن</a>
     </nav>
     <p>© 2026 SM TURBO — ولاية باتنة. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 
-<button id="backToTop" class="back-to-top" aria-label="العودة إلى الأعلى">↑</button>
+<button id="backToTop" class="back-to-top" aria-label="العودة إلى الأعلى">
+  <svg class="icon" style="width:20px;height:20px"><use href="#icon-arrow-up"/></svg>
+</button>
 
 <script src="assets/script.js"></script>
 </body>
