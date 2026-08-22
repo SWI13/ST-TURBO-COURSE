@@ -3,17 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SM TURBO — أكاديمية تكوين في ميكانيكا السيارات وأنظمة التربو بولاية باتنة، بخبرة عملية تطبيقية تفوق 40 سنة.">
+<meta name="theme-color" content="#000000">
 <title>SM TURBO | دورات ميكانيكا وتربو - ولاية باتنة</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23ff0000' stroke-width='4'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle'%3E%F0%9F%94%A7%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
+<a href="#main" class="skip-link">تخطَّ إلى المحتوى</a>
+
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">SM<span>TURBO</span></div>
-    <nav>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="siteNav">
+      <a href="#about">من نحن</a>
       <a href="#courses">الدورات</a>
       <a href="#why-us">لماذا نحن</a>
       <a href="#signup" class="nav-cta">سجّل الآن</a>
@@ -21,55 +32,81 @@
   </div>
 </header>
 
+<main id="main">
+
 <section class="hero">
   <div class="container hero-inner">
-    <h1>احترف عالم <span class="highlight">التربو وميكانيكا السيارات</span> مع SM TURBO</h1>
-    <p>دورات عملية 100% تأخذك من الصفر إلى الاحتراف، بخبرة عملية تطبيقية تمتد لأكثر من 40 سنة، في ولاية باتنة.</p>
-    <a href="#signup" class="btn-primary">احجز مقعدك الآن</a>
-    <div class="hero-stats">
+    <span class="hero-badge reveal">📍 SM TURBO · ولاية باتنة</span>
+    <h1 class="reveal">احترف عالم <span class="highlight">التربو وميكانيكا السيارات</span></h1>
+    <p class="reveal">دورات عملية 100% تأخذك من الصفر إلى الاحتراف، بخبرة عملية تطبيقية تمتد لأكثر من 40 سنة، في ولاية باتنة.</p>
+    <div class="hero-actions reveal">
+      <a href="#signup" class="btn-primary">احجز مقعدك الآن</a>
+      <a href="#courses" class="btn-ghost">تصفح الدورات</a>
+    </div>
+    <div class="hero-stats reveal">
       <div class="hero-stat">
         <div class="hero-stat-value">+40</div>
         <div class="hero-stat-label">سنة خبرة عملية تطبيقية</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">📍</div>
-        <div class="hero-stat-label">ولاية باتنة</div>
+        <div class="hero-stat-value">4</div>
+        <div class="hero-stat-label">دورات تخصصية</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">100%</div>
+        <div class="hero-stat-label">تدريب عملي</div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="about" id="about">
+  <div class="container about-inner reveal">
+    <h2 class="section-title">من نحن</h2>
+    <p>
+      SM TURBO هي مؤسسة تكوين متخصصة في ميكانيكا السيارات وأنظمة التربو، مقرها ولاية باتنة.
+      نقدّم تكوينًا عمليًا 100% مبنيًا على خبرة ميدانية تطبيقية تمتد لأكثر من 40 سنة في المجال،
+      لنؤهلك لدخول سوق العمل أو تطوير ورشتك الخاصة باحترافية حقيقية.
+    </p>
+  </div>
+</section>
+
 <section class="courses" id="courses">
   <div class="container">
-    <h2 class="section-title">دوراتنا</h2>
+    <h2 class="section-title reveal">دوراتنا</h2>
     <div class="courses-grid">
 
-      <div class="course-card">
+      <div class="course-card reveal">
         <div class="course-icon">🔧</div>
         <div class="course-name">أساسيات ميكانيكا السيارات</div>
         <p class="course-desc">من الصفر: فهم مكونات السيارة وقراءة الأعطال الشائعة.</p>
         <div class="course-duration">4 أسابيع</div>
+        <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
-      <div class="course-card">
+      <div class="course-card reveal">
+        <div class="course-badge">الأكثر طلبًا</div>
         <div class="course-icon">🌀</div>
         <div class="course-name">أنظمة التربو (Turbocharger)</div>
         <p class="course-desc">آلية عمل التربو، أعطاله الشائعة، وطرق صيانته وإصلاحه.</p>
         <div class="course-duration">3 أسابيع</div>
+        <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
-      <div class="course-card">
+      <div class="course-card reveal">
         <div class="course-icon">💻</div>
         <div class="course-name">تشخيص الأعطال بالكمبيوتر</div>
         <p class="course-desc">استخدام أجهزة الفحص (OBD) لتشخيص الأعطال باحترافية.</p>
         <div class="course-duration">3 أسابيع</div>
+        <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
-      <div class="course-card">
+      <div class="course-card reveal">
         <div class="course-icon">⚙️</div>
         <div class="course-name">تعديل وتقوية المحركات</div>
         <p class="course-desc">ريماب ECU، ترقية التربو، وبناء محركات عالية الأداء.</p>
         <div class="course-duration">5 أسابيع</div>
+        <button type="button" class="course-select">سجّل في هذه الدورة</button>
       </div>
 
     </div>
@@ -78,21 +115,21 @@
 
 <section class="why-us" id="why-us">
   <div class="container">
-    <h2 class="section-title">لماذا تختار SM TURBO؟</h2>
+    <h2 class="section-title reveal">لماذا تختار SM TURBO؟</h2>
     <div class="why-grid">
-      <div class="why-item">
+      <div class="why-item reveal">
         <div class="why-icon">🏆</div>
         <p>خبرة عملية تطبيقية تفوق 40 سنة</p>
       </div>
-      <div class="why-item">
+      <div class="why-item reveal">
         <div class="why-icon">🚗</div>
         <p>تدريب عملي 100% على سيارات حقيقية</p>
       </div>
-      <div class="why-item">
+      <div class="why-item reveal">
         <div class="why-icon">🛠️</div>
         <p>ورش مجهزة بأحدث أجهزة التشخيص</p>
       </div>
-      <div class="why-item">
+      <div class="why-item reveal">
         <div class="why-icon">📜</div>
         <p>شهادة معتمدة عند التخرج</p>
       </div>
@@ -102,22 +139,25 @@
 
 <section class="signup" id="signup">
   <div class="container">
-    <h2 class="section-title">سجّل بياناتك وسنتواصل معك</h2>
+    <h2 class="section-title reveal">سجّل بياناتك وسنتواصل معك</h2>
 
-    <form id="signupForm" class="signup-form" method="POST" target="hidden_iframe">
+    <form id="signupForm" class="signup-form reveal" method="POST" target="hidden_iframe" novalidate>
       <div class="form-row">
         <label for="name">الاسم الكامل *</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+        <span class="field-error" data-error-for="name"></span>
       </div>
 
       <div class="form-row">
         <label for="phone">رقم الهاتف *</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+        <span class="field-error" data-error-for="phone"></span>
       </div>
 
       <div class="form-row">
         <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" autocomplete="email">
+        <span class="field-error" data-error-for="email"></span>
       </div>
 
       <div class="form-row">
@@ -129,6 +169,7 @@
           <option value="تشخيص الأعطال بالكمبيوتر">تشخيص الأعطال بالكمبيوتر</option>
           <option value="تعديل وتقوية المحركات">تعديل وتقوية المحركات</option>
         </select>
+        <span class="field-error" data-error-for="course"></span>
       </div>
 
       <div class="form-row">
@@ -138,18 +179,29 @@
 
       <button type="submit" id="submitBtn" class="btn-primary">إرسال</button>
 
-      <p id="formMessage" class="form-message"></p>
+      <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
     </form>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" title="نتيجة إرسال النموذج" style="display:none;"></iframe>
   </div>
 </section>
 
+</main>
+
 <footer class="site-footer">
-  <div class="container">
+  <div class="container footer-inner">
+    <div class="logo">SM<span>TURBO</span></div>
+    <nav class="footer-nav">
+      <a href="#about">من نحن</a>
+      <a href="#courses">الدورات</a>
+      <a href="#why-us">لماذا نحن</a>
+      <a href="#signup">سجّل الآن</a>
+    </nav>
     <p>© 2026 SM TURBO — ولاية باتنة. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
+
+<button id="backToTop" class="back-to-top" aria-label="العودة إلى الأعلى">↑</button>
 
 <script src="assets/script.js"></script>
 </body>
