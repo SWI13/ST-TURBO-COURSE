@@ -84,6 +84,25 @@ nav a:hover { color: var(--red); }
   margin: 0 auto 35px;
 }
 
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 45px;
+  flex-wrap: wrap;
+}
+.hero-stat { text-align: center; }
+.hero-stat-value {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--red);
+}
+.hero-stat-label {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
 .btn-primary {
   display: inline-block;
   background-color: var(--red);
