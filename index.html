@@ -135,11 +135,51 @@
     </div>
 
     <div class="hero-visual reveal">
-      <figure class="turbo-photo">
-        <img src="assets/img/turbo.jpg"
-             alt="شاحن توربيني (تربو) داخل ورشة صيانة السيارات"
-             width="1200" height="1800" loading="eager" decoding="async">
-      </figure>
+      <svg class="turbo-svg" viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-label="رسم توضيحي لشاحن توربيني (تربو)">
+        <defs>
+          <linearGradient id="tbBody" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2b3038"/>
+            <stop offset="100%" stop-color="#14171b"/>
+          </linearGradient>
+          <linearGradient id="tbBlade" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2ac0ff"/>
+            <stop offset="100%" stop-color="#0b5b7d"/>
+          </linearGradient>
+        </defs>
+
+        <!-- outlet duct (drawn first so the volute overlaps it for a clean joint) -->
+        <path class="tb-duct" d="M287,210 L287,70 L339,70 L339,210 Z"/>
+        <rect class="tb-flange" x="278" y="50" width="70" height="21" rx="5"/>
+
+        <!-- volute (snail) housing -->
+        <path class="tb-volute"
+              d="M287,200
+                 A 94,94 0 0 0 200,106
+                 A 109,109 0 0 0 91,200
+                 A 124,124 0 0 0 200,324
+                 A 139,139 0 0 0 339,200
+                 L 287,200 Z"/>
+
+        <!-- inlet bore -->
+        <circle class="tb-bore" cx="200" cy="200" r="66"/>
+        <circle class="tb-bore-inner" cx="200" cy="200" r="58"/>
+
+        <!-- compressor wheel -->
+        <g class="tb-wheel">
+          <g class="tb-blades">
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(45 200 200)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(90 200 200)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(135 200 200)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(180 200 200)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(225 200 200)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(270 200 200)"/>
+            <path d="M212,194 Q238,186 256,202 Q234,201 212,206 Z" fill="url(#tbBlade)" transform="rotate(315 200 200)"/>
+          </g>
+          <circle class="tb-hub" cx="200" cy="200" r="13"/>
+        </g>
+      </svg>
     </div>
   </div>
 </section>
