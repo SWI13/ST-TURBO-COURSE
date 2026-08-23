@@ -152,6 +152,8 @@ function clearChoiceSelections(form) {
 
 function setupForm() {
   const form = document.getElementById('signupForm');
+  if (!form) return; // pages without a signup form (e.g. the course hub)
+
   const iframe = document.getElementById('hidden_iframe');
   const submitBtn = document.getElementById('submitBtn');
   const message = document.getElementById('formMessage');

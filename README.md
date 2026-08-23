@@ -1,13 +1,33 @@
-# Turbo Academy — Landing Page
+# SM Courses — Landing Pages
 
-Static landing page (Arabic, RTL) for a turbo/car-mechanics course business, with a
-signup form that writes directly into a Google Sheet.
+Static site (Arabic, RTL) for SM's training courses, with signup forms that write
+directly into a Google Sheet. `index.html` is a course-selection hub; each course
+has its own full landing page.
 
 ## Files
 
-- `index.html` — the page
-- `assets/style.css`, `assets/script.js` — styling and form logic
-- `apps-script/Code.gs` — code to paste into Google Apps Script (the backend)
+- `index.html` — course hub: renders course cards from `assets/courses.js`
+- `turbo.html` — Turbo (mechanics) course page
+- `detailing.html` — Detailing course page (neon theme)
+- `assets/style.css` — shared design tokens and components (buttons, cards, forms,
+  accordion, course cards) used by every page
+- `assets/detailing.css` — Detailing-only theme: overrides the shared color tokens
+  and adds glass/glow effects, loaded in addition to `style.css`
+- `assets/courses.js` — the `COURSES` array driving the hub's course cards; add a
+  course here (plus its own `<course>.html` page) to list a new one
+- `assets/script.js` — shared behavior (nav, reveal-on-scroll, counters, FAQ/
+  accordion, signup form) used by all pages
+- `apps-script/Code.gs` — code to paste into Google Apps Script (the backend) —
+  shared by every course's signup form; each form sends its own `course` value
+  into the same sheet
+
+## Adding a new course
+
+1. Duplicate `turbo.html` or `detailing.html` as a starting point for the new
+   course page, and give its signup form's hidden `course` input a distinct value.
+2. Add an entry to the `COURSES` array in `assets/courses.js` (name, description,
+   `href` to the new page, an icon symbol id, and an accent color).
+3. No other changes are needed — the hub's card grid is rendered from that array.
 
 ## One-time setup: connect the form to a Google Sheet (~5 minutes)
 
