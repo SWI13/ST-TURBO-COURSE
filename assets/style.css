@@ -113,9 +113,19 @@ section[id] { scroll-margin-top: 90px; }
   position: relative;
 }
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 900;
   font-size: 22px;
   letter-spacing: 1px;
+}
+/* SM ACADEMY mark. Sized by height so the wordmark keeps its aspect ratio;
+   the width/height attributes on the tag reserve the box before it loads. */
+.logo-mark {
+  display: block;
+  height: 40px;
+  width: auto;
 }
 .logo span { color: var(--red); }
 
@@ -660,6 +670,7 @@ nav a:hover { color: var(--blue); }
 }
 
 @media (max-width: 600px) {
+  .logo-mark { height: 32px; }
   .hero { padding: 70px 0 60px; }
   .hero-stats { gap: 28px; margin-top: 36px; }
   .hero-inner { gap: 34px; }
