@@ -1,5 +1,5 @@
 // رابط Google Apps Script Web App — عند إعادة نشر السكربت، حدّث هذا الرابط.
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxu7_MuvZdjhRsAU-8ZirCkzZDomDKJFIWu78bf5WASLOloHVrHLQteLTSQ5y6wurN6/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzyuo9VK1fRE39ZLQ9lBVMFir9dVbjgMe6gyQgf6ZEvR33sGUXY0L7_01Klrd5xQEH3/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
   setupNav();
