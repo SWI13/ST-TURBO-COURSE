@@ -1,4 +1,4 @@
-/* Turbo course page. All design decisions live in these tokens. */
+/* Shared design system for the course pages (index.html, turbo.html). All design decisions live in these tokens. */
 :root {
   --ink: #1d1d1f;
   --ink-2: #6e6e73;
@@ -243,3 +243,15 @@ section[id] { scroll-margin-top: var(--header-h); }
 }
 .nowrap { white-space: nowrap; }
 .aside { margin-block-start: var(--s4); font-size: var(--fs-small); color: var(--ink-2); }
+
+/* Course hub (index.html) */
+.hero--text { padding-block-end: var(--section); }
+.course-grid { display: grid; gap: var(--s6); }
+@media (min-width: 768px) { .course-grid { grid-template-columns: 1fr 1fr; gap: var(--s4); } }
+.course-card { display: grid; gap: var(--s3); align-content: start; }
+.course-card-media { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); }
+.course-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.course-card-meta { font-size: var(--fs-small); color: var(--ink-2); }
+.course-card-desc { color: var(--ink-2); margin-block: var(--s1) var(--s3); max-width: 46ch; }
+.course-card .h3 { margin-block-start: 4px; }
+.about-text { max-width: 40ch; }

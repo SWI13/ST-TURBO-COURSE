@@ -1,4 +1,4 @@
-// Turbo page only: header blur once the page scrolls, and one scroll-linked moment
+// Header blur once the page scrolls, and one scroll-linked moment
 // (the hero photo settles from a slight zoom to rest as it comes into view).
 (function () {
   const header = document.getElementById('siteHeader');

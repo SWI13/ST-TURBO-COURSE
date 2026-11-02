@@ -8,6 +8,7 @@ has its own full landing page.
 
 - `index.html` — course hub: renders course cards from `assets/courses.js`
 - `turbo.html` — Turbo (mechanics) course page
+- `assets/site.css` / `assets/site.js` — design system and header/hero motion shared by `index.html` and `turbo.html`
 - `detailing.html` — Detailing course page (neon theme)
 - `assets/style.css` — shared design tokens and components (buttons, cards, forms,
   accordion, course cards) used by every page
@@ -26,7 +27,7 @@ has its own full landing page.
 1. Duplicate `turbo.html` or `detailing.html` as a starting point for the new
    course page, and give its signup form's hidden `course` input a distinct value.
 2. Add an entry to the `COURSES` array in `assets/courses.js` (name, description,
-   `href` to the new page, an icon symbol id, and an accent color).
+   `href` to the new page, meta labels, and a 4:5 image with its srcset and alt text).
 3. No other changes are needed — the hub's card grid is rendered from that array.
 
 ## One-time setup: connect the form to a Google Sheet (~5 minutes)
