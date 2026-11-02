@@ -242,3 +242,4 @@ section[id] { scroll-margin-top: var(--header-h); }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
 .nowrap { white-space: nowrap; }
+.aside { margin-block-start: var(--s4); font-size: var(--fs-small); color: var(--ink-2); }
