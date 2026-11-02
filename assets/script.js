@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupNav() {
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('siteNav');
+  if (!toggle || !nav) return; // pages with a slim header have no menu toggle
 
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
@@ -30,6 +31,7 @@ function setupNav() {
 
 function setupBackToTop() {
   const btn = document.getElementById('backToTop');
+  if (!btn) return;
 
   window.addEventListener('scroll', () => {
     btn.classList.toggle('visible', window.scrollY > 500);

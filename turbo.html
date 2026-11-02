@@ -4,311 +4,188 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SM TURBO — دورة تكوين شاملة في التيربو وتلميع السيارات، أسبوع واحد، في باتنة (دوران لافيراي)، بخبرة عملية تطبيقية تفوق 40 سنة.">
-<meta name="theme-color" content="#060608">
+<meta name="theme-color" content="#000000">
 <title>SM TURBO | دورة التيربو الشاملة - باتنة</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23ff0000' stroke-width='4'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle'%3E%F0%9F%94%A7%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='700' font-size='44' text-anchor='middle' fill='%23fff'%3ESM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/turbo/hero-m-800.webp" media="(max-width: 767px)">
+<link rel="preload" as="image" href="assets/img/turbo/hero-1200.webp" imagesrcset="assets/img/turbo/hero-1200.webp 1200w, assets/img/turbo/hero-2000.webp 2000w" imagesizes="(min-width: 1264px) 1200px, 100vw" media="(min-width: 768px)">
+<link rel="stylesheet" href="assets/turbo.css">
 </head>
 <body>
 
-<!-- Icon sprite: inline SVG symbols (no emoji, no external icon library) -->
-<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
-  <defs>
-    <symbol id="icon-map-pin" viewBox="0 0 24 24">
-      <path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/>
-      <circle cx="12" cy="10" r="2.4"/>
-    </symbol>
-    <symbol id="icon-wrench" viewBox="0 0 24 24">
-      <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2-2 2.1-2.1Z"/>
-    </symbol>
-    <symbol id="icon-turbine" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="2"/>
-      <path d="M12 12 C12 7 15 5 18 6 C16 8 14 10 12 12 Z"/>
-      <path d="M12 12 C7 12 5 9 6 6 C8 8 10 10 12 12 Z"/>
-      <path d="M12 12 C12 17 9 19 6 18 C8 16 10 14 12 12 Z"/>
-      <path d="M12 12 C17 12 19 15 18 18 C16 16 14 14 12 12 Z"/>
-    </symbol>
-    <symbol id="icon-cpu" viewBox="0 0 24 24">
-      <rect x="7" y="7" width="10" height="10" rx="1"/>
-      <rect x="10" y="10" width="4" height="4"/>
-      <line x1="9" y1="7" x2="9" y2="4"/>
-      <line x1="15" y1="7" x2="15" y2="4"/>
-      <line x1="9" y1="17" x2="9" y2="20"/>
-      <line x1="15" y1="17" x2="15" y2="20"/>
-      <line x1="7" y1="9" x2="4" y2="9"/>
-      <line x1="7" y1="15" x2="4" y2="15"/>
-      <line x1="17" y1="9" x2="20" y2="9"/>
-      <line x1="17" y1="15" x2="20" y2="15"/>
-    </symbol>
-    <symbol id="icon-badge" viewBox="0 0 24 24">
-      <circle cx="12" cy="8" r="5.2"/>
-      <path d="M8 13 6.5 20 12 17.5 17.5 20 16 13"/>
-    </symbol>
-    <symbol id="icon-toolbox" viewBox="0 0 24 24">
-      <rect x="4" y="10" width="16" height="9" rx="1.5"/>
-      <path d="M9 10V7.5a3 3 0 0 1 6 0V10"/>
-      <line x1="4" y1="14.5" x2="20" y2="14.5"/>
-    </symbol>
-    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
-      <path d="M6 9 12 15 18 9"/>
-    </symbol>
-    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
-      <path d="M12 19V5"/>
-      <path d="M6 11 12 5 18 11"/>
-    </symbol>
-    <symbol id="icon-cert-stamp" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="1 4" stroke-linecap="round" opacity="0.6"/>
-      <circle cx="32" cy="32" r="24" fill="#ffffff" stroke="none"/>
-      <path d="M32 8A24 24 0 0 0 32 56Z" fill="#006233" stroke="none"/>
-      <circle cx="34" cy="32" r="10" fill="#D21034" stroke="none"/>
-      <circle cx="37.5" cy="32" r="8.2" fill="#ffffff" stroke="none"/>
-      <path d="M38 27.6 39.1 30.7 42.4 30.8 39.8 32.8 40.7 36 38 34.1 35.3 36 36.2 32.8 33.6 30.8 36.9 30.7Z" fill="#D21034" stroke="none"/>
-    </symbol>
-    <symbol id="icon-clock" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M12 7v5l3.5 2"/>
-    </symbol>
-    <symbol id="icon-chat" viewBox="0 0 24 24">
-      <rect x="3" y="5" width="18" height="11" rx="2"/>
-      <path d="M8 16 6.5 20 11.5 16"/>
-    </symbol>
-    <symbol id="icon-sparkle" viewBox="0 0 24 24">
-      <path d="M12 2 14 10 22 12 14 14 12 22 10 14 2 12 10 10Z"/>
-    </symbol>
-    <symbol id="icon-droplet" viewBox="0 0 24 24">
-      <path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/>
-    </symbol>
-  </defs>
-</svg>
-
 <a href="#main" class="skip-link">تخطَّ إلى المحتوى</a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo"><img class="logo-mark" src="assets/img/sm-academy-logo.png" alt="SM ACADEMY" width="480" height="270" decoding="async" onerror="this.closest('.logo').classList.add('logo--nomark');this.remove();"><span class="logo-text">SM</span><span>TURBO</span></a>
-
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="فتح القائمة">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav id="siteNav">
-      <a href="#about">من نحن</a>
-      <a href="#courses">الدورة</a>
-      <a href="#why-us">لماذا نحن</a>
-      <a href="#faq">الأسئلة الشائعة</a>
-      <a href="#signup" class="nav-cta">سجّل الآن</a>
+<header class="site-header" id="siteHeader">
+  <div class="wrap-wide header-inner">
+    <a href="index.html" class="logo" aria-label="SM ACADEMY — كل الدورات">
+      <img src="assets/img/sm-academy-logo.png" alt="SM ACADEMY" width="480" height="270" decoding="async" onerror="this.closest('.logo').classList.add('logo--nomark');this.remove();">
+      <span class="logo-fallback latin">SM TURBO</span>
+    </a>
+    <nav class="header-nav" aria-label="روابط الصفحة">
+      <a href="#program" class="hide-sm">البرنامج</a>
+      <a href="#pricing" class="hide-sm">السعر</a>
+      <a href="#faq" class="hide-sm">الأسئلة</a>
+      <a href="#signup" class="btn btn-primary btn-sm">سجّل الآن</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <span class="hero-badge reveal">
-        <svg class="icon" style="width:14px;height:14px"><use href="#icon-map-pin"/></svg>
-        SM TURBO · باتنة، دوران لافيراي
-      </span>
-      <h1 class="reveal">احترف عالم <span class="highlight">التيربو وميكانيكا السيارات</span></h1>
-      <p class="reveal">دورة عملية شاملة 100%، أسبوعٌ واحد فقط، تؤهلك لاحتراف التيربو والتعامل مع الزبائن وتلميع السيارات، بخبرة تطبيقية تمتد لأكثر من 40 سنة، في باتنة.</p>
-      <div class="hero-actions reveal">
-        <a href="#signup" class="btn-primary">احجز مقعدك الآن</a>
-        <a href="#courses" class="btn-ghost">تفاصيل الدورة</a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="hero-stat">
-          <div class="hero-stat-value"><span class="counter" data-target="40" data-suffix="+">0</span></div>
-          <div class="hero-stat-label">سنة خبرة عملية تطبيقية</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value"><span class="counter" data-target="5">0</span></div>
-          <div class="hero-stat-label">مهارات عملية أساسية</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value"><span class="counter" data-target="100" data-suffix="%">0</span></div>
-          <div class="hero-stat-label">تدريب عملي</div>
-        </div>
-      </div>
+<section class="hero section--night" aria-labelledby="heroTitle">
+  <div class="wrap center">
+    <p class="eyebrow reveal">SM TURBO · باتنة</p>
+    <h1 id="heroTitle" class="reveal">احترف التيربو.</h1>
+    <p class="lead reveal">دورة عملية 100%، أسبوع واحد، بخبرة تطبيقية تفوق 40 سنة.</p>
+    <p class="hero-date reveal">الدورة القادمة: <strong>7 نوفمبر 2026</strong></p>
+    <div class="hero-actions reveal">
+      <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+      <a href="#program" class="link">شاهد البرنامج</a>
     </div>
-
-    <div class="hero-visual reveal">
-      <figure class="turbo-photo">
-        <img src="assets/img/turbo.jpg"
-             alt="شاحن توربيني (تيربو) داخل ورشة صيانة السيارات"
-             width="1200" height="1800" loading="eager" decoding="async">
-      </figure>
-    </div>
+  </div>
+  <div class="wrap-wide hero-media">
+    <figure>
+      <picture>
+        <source media="(min-width: 768px)" srcset="assets/img/turbo/hero-1200.webp 1200w, assets/img/turbo/hero-2000.webp 2000w" sizes="(min-width: 1264px) 1200px, 100vw" width="1200" height="675">
+        <img id="heroImg" src="assets/img/turbo/hero-m-800.webp" srcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" sizes="100vw" width="800" height="1000" alt="لافتة SM TURBO المضيئة ليلًا أمام مقر الورشة في باتنة" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="container about-inner reveal">
-    <span class="section-eyebrow">من نحن</span>
-    <h2 class="section-title">SM TURBO</h2>
-    <p>
-      SM TURBO هي مؤسسة تكوين متخصصة في ميكانيكا التيربو وتجميل السيارات، مقرها باتنة (أمام محور دوران لافيراي).
-      نقدّم دورة تكوين عملية مكثفة مدتها أسبوع واحد فقط، مبنية على خبرة ميدانية تطبيقية تمتد لأكثر من 40 سنة،
-      تؤهلك لإتقان التيربو، والتعامل مع الزبائن، وتلميع وتنظيف السيارات باحترافية حقيقية.
-    </p>
-  </div>
-</section>
+<section class="section" id="master" aria-labelledby="masterTitle">
+  <div class="wrap-wide">
+    <div class="wrap center head reveal">
+      <p class="eyebrow">ما ستتقنه</p>
+      <h2 id="masterTitle" class="h2">من الورشة إلى الزبون.</h2>
+    </div>
 
-<section class="courses" id="courses">
-  <div class="container">
-    <span class="section-eyebrow reveal">الدورة</span>
-    <h2 class="section-title reveal">دورة التيربو الشاملة</h2>
-
-    <div class="course-panel tech-corners reveal">
-      <span class="card-shine" aria-hidden="true"></span>
-      <div class="course-panel-header">
-        <div class="course-panel-icon"><svg class="icon"><use href="#icon-turbine"/></svg></div>
-        <div class="course-panel-name">دورة تكوين شاملة في التيربو والتجميل</div>
-        <div class="course-panel-meta">
-          <span class="course-meta-pill">
-            <svg class="icon" style="width:14px;height:14px"><use href="#icon-clock"/></svg>
-            أسبوع واحد
-          </span>
-          <span class="course-meta-pill">
-            <svg class="icon" style="width:14px;height:14px"><use href="#icon-map-pin"/></svg>
-            باتنة · دوران لافيراي
-          </span>
-        </div>
+    <div class="feature reveal">
+      <div>
+        <h3 class="h2">فكّ وركّب التيربو بيدك.</h3>
+        <p class="lead">تعلّم التيربو تفكيكًا وتركيبًا، على قطع حقيقية.</p>
       </div>
-
-      <div class="program-list">
-        <div class="program-item">
-          <svg class="icon program-item-icon"><use href="#icon-wrench"/></svg>
-          <p>تعلم التيربو (تفكيك وتركيب)</p>
-        </div>
-        <div class="program-item">
-          <svg class="icon program-item-icon"><use href="#icon-cpu"/></svg>
-          <p>معرفة أسباب وأعطال التيربو</p>
-        </div>
-        <div class="program-item">
-          <svg class="icon program-item-icon"><use href="#icon-chat"/></svg>
-          <p>الاستقبال والتحدث مع الزبون وكسب المشتري والبيع</p>
-        </div>
-        <div class="program-item">
-          <svg class="icon program-item-icon"><use href="#icon-sparkle"/></svg>
-          <p>تعلم تلميع السيارات</p>
-        </div>
-        <div class="program-item">
-          <svg class="icon program-item-icon"><use href="#icon-droplet"/></svg>
-          <p>تنظيف داخلي وخارجي باحترافية</p>
-        </div>
-      </div>
-
-      <div class="course-panel-cta">
-        <a href="#signup" class="btn-primary">سجّل في هذه الدورة الآن</a>
-      </div>
+      <figure><img src="assets/img/turbo/bench-640.webp" srcset="assets/img/turbo/bench-640.webp 640w, assets/img/turbo/bench-1080.webp 1080w" sizes="(min-width: 900px) 560px, 100vw" width="640" height="800" loading="lazy" decoding="async" alt="متربص بمئزر SM TURBO يعمل على تيربو فوق طاولة الورشة"></figure>
     </div>
   </div>
 </section>
 
-<section class="why-us" id="why-us">
-  <div class="container">
-    <span class="section-eyebrow reveal">المزايا</span>
-    <h2 class="section-title reveal">لماذا تختار SM TURBO؟</h2>
-    <div class="why-grid">
-      <div class="why-item reveal">
-        <div class="why-icon"><svg class="icon"><use href="#icon-badge"/></svg></div>
-        <p>خبرة عملية تطبيقية تفوق 40 سنة</p>
+<section class="section section--mist" aria-label="أسباب وأعطال التيربو">
+  <div class="wrap-wide">
+    <div class="feature feature--flip reveal">
+      <div>
+        <h3 class="h2">اعرف سبب العطل.</h3>
+        <p class="lead">أسباب وأعطال التيربو، وكيف تكتشفها.</p>
       </div>
-      <div class="why-item reveal">
-        <div class="why-icon"><svg class="icon"><use href="#icon-toolbox"/></svg></div>
-        <p>تدريب عملي 100% على سيارات حقيقية</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-icon"><svg class="icon"><use href="#icon-cpu"/></svg></div>
-        <p>ورش مجهزة بأحدث أجهزة التشخيص</p>
-      </div>
-      <div class="why-item reveal">
-        <div class="why-icon"><svg class="icon"><use href="#icon-cert-stamp"/></svg></div>
-        <p>شهادة دولة معتمدة بشراكة مع المعهد العالي نيسي برو للتكوين</p>
-      </div>
+      <figure><img src="assets/img/turbo/diag-640.webp" srcset="assets/img/turbo/diag-640.webp 640w, assets/img/turbo/diag-1080.webp 1080w" sizes="(min-width: 900px) 560px, 100vw" width="640" height="800" loading="lazy" decoding="async" alt="متربص يتابع شرح مكونات التيربو على الشاشة في قاعة الدرس"></figure>
     </div>
   </div>
 </section>
 
-<section class="faq" id="faq">
-  <div class="container">
-    <span class="section-eyebrow reveal">الأسئلة الشائعة</span>
-    <h2 class="section-title reveal">قد يهمك معرفته</h2>
-    <div class="faq-list">
-
-      <div class="faq-item reveal" data-open="false">
-        <button type="button" class="faq-question" aria-expanded="false">
-          هل هذه الدورة مناسبة للمبتدئين؟
-          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          نعم، الدورة مصممة لتغطي الأساسيات العملية خطوة بخطوة، ولا تشترط أي خبرة سابقة.
-        </div></div>
+<section class="section" aria-label="الاستقبال والبيع">
+  <div class="wrap-wide">
+    <div class="feature reveal">
+      <div>
+        <h3 class="h2">كلّم الزبون. واكسب البيع.</h3>
+        <p class="lead">الاستقبال، والتحدث مع الزبون، وكسب المشتري.</p>
       </div>
-
-      <div class="faq-item reveal" data-open="false">
-        <button type="button" class="faq-question" aria-expanded="false">
-          ما مدة الدورة؟
-          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          مدة الدورة أسبوع واحد فقط، مكثف وعملي بالكامل.
-        </div></div>
-      </div>
-
-      <div class="faq-item reveal" data-open="false">
-        <button type="button" class="faq-question" aria-expanded="false">
-          أين تُقام الدورة؟
-          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          تُقام الدورة حضوريًا في باتنة، أمام محور دوران لافيراي.
-        </div></div>
-      </div>
-
-      <div class="faq-item reveal" data-open="false">
-        <button type="button" class="faq-question" aria-expanded="false">
-          هل أحصل على شهادة بعد إتمام الدورة؟
-          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          نعم، بموجب شراكة رسمية مع المعهد العالي (نيسي برو) للتكوين (رقم الاعتماد 2025/09)، يحصل كل متدرب على شهادة دولة معتمدة عند إتمام الدورة بنجاح.
-        </div></div>
-      </div>
-
-      <div class="faq-item reveal" data-open="false">
-        <button type="button" class="faq-question" aria-expanded="false">
-          هل التدريب عملي أم نظري فقط؟
-          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          التدريب عملي بنسبة 100%، على سيارات وأجهزة تشخيص حقيقية.
-        </div></div>
-      </div>
-
-      <div class="faq-item reveal" data-open="false">
-        <button type="button" class="faq-question" aria-expanded="false">
-          كيف أسجل في الدورة؟
-          <svg class="icon" style="width:18px;height:18px"><use href="#icon-chevron-down"/></svg>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          عبر تعبئة نموذج التسجيل أدناه، وسنتواصل معك لتأكيد التفاصيل.
-        </div></div>
-      </div>
-
+      <figure><img src="assets/img/turbo/reception-640.webp" srcset="assets/img/turbo/reception-640.webp 640w, assets/img/turbo/reception-1080.webp 1080w" sizes="(min-width: 900px) 560px, 100vw" width="640" height="800" loading="lazy" decoding="async" alt="مكتب استقبال SM TURBO"></figure>
     </div>
   </div>
 </section>
 
-<section class="signup" id="signup">
-  <div class="container">
-    <span class="section-eyebrow reveal">التسجيل</span>
-    <h2 class="section-title reveal">سجّل بياناتك وسنتواصل معك</h2>
+<section class="section section--mist" aria-label="التلميع والتنظيف">
+  <div class="wrap-wide">
+    <div class="feature feature--flip reveal">
+      <div>
+        <h3 class="h2">لمعة احترافية. من الداخل والخارج.</h3>
+        <p class="lead">تلميع السيارات، وتنظيف داخلي وخارجي باحترافية.</p>
+      </div>
+      <figure><img src="assets/img/turbo/polish-640.webp" srcset="assets/img/turbo/polish-640.webp 640w, assets/img/turbo/polish-1080.webp 1080w" sizes="(min-width: 900px) 560px, 100vw" width="640" height="800" loading="lazy" decoding="async" alt="تنظيف حجرة محرك سيارة بقطعة قماش"></figure>
+    </div>
+  </div>
+</section>
 
-    <form id="signupForm" class="signup-form tech-corners reveal" method="POST" target="hidden_iframe" novalidate>
+<section class="section" id="workshop" aria-labelledby="workshopTitle">
+  <div class="wrap-wide">
+    <div class="wrap center head reveal">
+      <p class="eyebrow">الورشة</p>
+      <h2 id="workshopTitle" class="h2">تتعلّم حيث نعمل.</h2>
+      <p class="lead">باتنة، أمام محور دوران لافيراي.</p>
+    </div>
+    <div class="grid reveal">
+      <figure><img src="assets/img/turbo/store-640.webp" srcset="assets/img/turbo/store-640.webp 640w, assets/img/turbo/store-1080.webp 1080w" sizes="(min-width: 900px) 290px, 50vw" width="640" height="800" loading="lazy" decoding="async" alt="متربص أمام رفوف التيربو في المخزن"></figure>
+      <figure><img src="assets/img/turbo/turbo-640.webp" srcset="assets/img/turbo/turbo-640.webp 640w, assets/img/turbo/turbo-1080.webp 1080w" sizes="(min-width: 900px) 290px, 50vw" width="640" height="800" loading="lazy" decoding="async" alt="تيربو على طاولة العمل أمام لوحة الأدوات"></figure>
+      <figure><img src="assets/img/turbo/shelves-640.webp" srcset="assets/img/turbo/shelves-640.webp 640w, assets/img/turbo/shelves-1080.webp 1080w" sizes="(min-width: 900px) 290px, 50vw" width="640" height="800" loading="lazy" decoding="async" alt="رفوف قطع الغيار في محل SM TURBO"></figure>
+      <figure><img src="assets/img/turbo/class-640.webp" srcset="assets/img/turbo/class-640.webp 640w, assets/img/turbo/class-1080.webp 1080w" sizes="(min-width: 900px) 290px, 50vw" width="640" height="800" loading="lazy" decoding="async" alt="قاعة الدرس مع شاشة عرض"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist" id="program" aria-labelledby="programTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <p class="eyebrow">البرنامج</p>
+      <h2 id="programTitle" class="h2">ستة أيام. عملية بالكامل.</h2>
+    </div>
+    <ol class="days reveal">
+      <li class="day"><span class="day-n">اليوم 1</span><span class="day-t">تعلم التيربو: تفكيك وتركيب</span></li>
+      <li class="day"><span class="day-n">اليوم 2</span><span class="day-t">معرفة أسباب وأعطال التيربو</span></li>
+      <li class="day"><span class="day-n">اليوم 3</span><span class="day-t">الاستقبال والتحدث مع الزبون وكسب المشتري والبيع</span></li>
+      <li class="day"><span class="day-n">اليوم 4</span><span class="day-t">تعلم تلميع السيارات</span></li>
+      <li class="day"><span class="day-n">اليوم 5</span><span class="day-t">تنظيف داخلي وخارجي باحترافية</span></li>
+      <li class="day"><span class="day-n">اليوم 6</span><span class="day-t"><span class="ph">[محتوى اليوم السادس — للتأكيد]</span></span></li>
+    </ol>
+    <p class="ph-note center"><span class="ph">[ترتيب المواضيع على الأيام للتأكيد من الأكاديمية]</span></p>
+  </div>
+</section>
+
+<section class="section" id="testimonials" aria-labelledby="testiTitle">
+  <div class="wrap-wide">
+    <div class="wrap center head reveal">
+      <p class="eyebrow">المتربصون</p>
+      <h2 id="testiTitle" class="h2">بكلماتهم.</h2>
+    </div>
+    <!-- Real student videos only. Swap each placeholder for <video controls preload="none" poster="…"> once the student agrees. -->
+    <div class="videos reveal">
+      <figure class="video-card"><span>[فيديو متربص حقيقي 1 — بانتظار موافقة المتربص]</span></figure>
+      <figure class="video-card"><span>[فيديو متربص حقيقي 2 — بانتظار موافقة المتربص]</span></figure>
+      <figure class="video-card"><span>[فيديو متربص حقيقي 3 — بانتظار موافقة المتربص]</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist" id="pricing" aria-labelledby="priceTitle">
+  <div class="wrap">
+    <div class="price-card reveal">
+      <p class="eyebrow">السعر</p>
+      <h2 id="priceTitle" class="h3">دورة التيربو الشاملة</h2>
+      <p class="price"><span class="ph">[السعر]</span> <span class="price-unit">دج</span></p>
+      <p class="deposit">احجز مقعدك بعربون <span class="ph">[المبلغ]</span> دج.</p>
+      <ul class="includes">
+        <li>أسبوع واحد، تدريب عملي 100%</li>
+        <li>شهادة دولة معتمدة بشراكة مع المعهد العالي نيسي برو للتكوين</li>
+        <li>باتنة، أمام محور دوران لافيراي</li>
+      </ul>
+      <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+      <p class="call">أو اتصل بنا: <a class="link" href="tel:+213563531042" dir="ltr">0563 53 10 42</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="signup" aria-labelledby="signupTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <p class="eyebrow">التسجيل</p>
+      <h2 id="signupTitle" class="h2">احجز مقعدك.</h2>
+      <p class="lead">املأ النموذج، ونتصل بك لتأكيد التفاصيل.</p>
+    </div>
+
+    <form id="signupForm" class="signup-form reveal" method="POST" target="hidden_iframe" novalidate>
       <div class="form-row">
         <label for="name">الاسم الكامل *</label>
         <input type="text" id="name" name="name" autocomplete="name" required>
@@ -317,13 +194,13 @@
 
       <div class="form-row">
         <label for="phone">رقم الهاتف *</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required>
         <span class="field-error" data-error-for="phone"></span>
       </div>
 
       <div class="form-row">
         <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" autocomplete="email">
+        <input type="email" id="email" name="email" autocomplete="email" dir="ltr">
         <span class="field-error" data-error-for="email"></span>
       </div>
 
@@ -366,7 +243,7 @@
         <textarea id="notes" name="notes" rows="3"></textarea>
       </div>
 
-      <button type="submit" id="submitBtn" class="btn-primary">إرسال</button>
+      <button type="submit" id="submitBtn" class="btn btn-primary">إرسال</button>
 
       <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
     </form>
@@ -375,27 +252,67 @@
   </div>
 </section>
 
+<section class="section section--mist" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <p class="eyebrow">الأسئلة الشائعة</p>
+      <h2 id="faqTitle" class="h2">أسئلة متكررة.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">هل هذه الدورة مناسبة للمبتدئين؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>نعم، الدورة مصممة لتغطي الأساسيات العملية خطوة بخطوة، ولا تشترط أي خبرة سابقة.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">ما مدة الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>مدة الدورة أسبوع واحد فقط، مكثف وعملي بالكامل.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">أين تُقام الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>تُقام الدورة حضوريًا في باتنة، أمام محور دوران لافيراي.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">هل أحصل على شهادة بعد إتمام الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>نعم، بموجب شراكة رسمية مع المعهد العالي (نيسي برو) للتكوين (رقم الاعتماد 2025/09)، يحصل كل متدرب على شهادة دولة معتمدة عند إتمام الدورة بنجاح.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">هل التدريب عملي أم نظري فقط؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>التدريب عملي بنسبة 100%، على سيارات وأجهزة تشخيص حقيقية.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">كيف أسجل في الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>عبر تعبئة نموذج التسجيل أعلاه، وسنتواصل معك لتأكيد التفاصيل.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--night final" aria-labelledby="finalTitle">
+  <div class="wrap center reveal">
+    <h2 id="finalTitle" class="h2">الدورة القادمة: 7 نوفمبر.</h2>
+    <p class="lead">المقاعد محدودة.</p>
+    <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="index.html" class="logo"><img class="logo-mark" src="assets/img/sm-academy-logo.png" alt="SM ACADEMY" width="480" height="270" decoding="async" onerror="this.closest('.logo').classList.add('logo--nomark');this.remove();"><span class="logo-text">SM</span><span>TURBO</span></a>
-    <nav class="footer-nav">
-      <a href="index.html">الدورات</a>
-      <a href="#about">من نحن</a>
-      <a href="#courses">الدورة</a>
-      <a href="#why-us">لماذا نحن</a>
+  <div class="wrap-wide footer-inner">
+    <a href="index.html" class="logo" aria-label="SM ACADEMY — كل الدورات"><img src="assets/img/sm-academy-logo.png" alt="SM ACADEMY" width="480" height="270" loading="lazy" decoding="async" onerror="this.closest('.logo').classList.add('logo--nomark');this.remove();"><span class="logo-fallback latin">SM TURBO</span></a>
+    <nav class="footer-links" aria-label="روابط التذييل">
+      <a href="index.html">كل الدورات</a>
+      <a href="#program">البرنامج</a>
+      <a href="#pricing">السعر</a>
       <a href="#faq">الأسئلة الشائعة</a>
       <a href="#signup">سجّل الآن</a>
+      <a href="tel:+213563531042" dir="ltr">0563 53 10 42</a>
     </nav>
-    <p>© 2026 SM TURBO — باتنة، أمام محور دوران لافيراي. جميع الحقوق محفوظة.</p>
+    <p class="footer-line">© 2026 SM TURBO — باتنة، أمام محور دوران لافيراي. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 
-<button id="backToTop" class="back-to-top" aria-label="العودة إلى الأعلى">
-  <svg class="icon" style="width:20px;height:20px"><use href="#icon-arrow-up"/></svg>
-</button>
-
 <script src="assets/script.js"></script>
+<script src="assets/turbo.js"></script>
 </body>
 </html>
