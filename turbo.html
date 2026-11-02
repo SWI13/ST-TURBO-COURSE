@@ -9,9 +9,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='700' font-size='44' text-anchor='middle' fill='%23fff'%3ESM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/turbo/hero-m-800.webp" media="(max-width: 767px)">
+<!-- Fonts load without blocking first paint; system fonts show until they arrive. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="image" href="assets/img/turbo/hero-m-800.webp" imagesrcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/turbo/hero-1200.webp" imagesrcset="assets/img/turbo/hero-1200.webp 1200w, assets/img/turbo/hero-2000.webp 2000w" imagesizes="(min-width: 1264px) 1200px, 100vw" media="(min-width: 768px)">
 <link rel="stylesheet" href="assets/turbo.css">
 </head>
@@ -51,7 +52,7 @@
     <figure>
       <picture>
         <source media="(min-width: 768px)" srcset="assets/img/turbo/hero-1200.webp 1200w, assets/img/turbo/hero-2000.webp 2000w" sizes="(min-width: 1264px) 1200px, 100vw" width="1200" height="675">
-        <img id="heroImg" src="assets/img/turbo/hero-m-800.webp" srcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" sizes="100vw" width="800" height="1000" alt="لافتة SM TURBO المضيئة ليلًا أمام مقر الورشة في باتنة" fetchpriority="high" decoding="async">
+        <img id="heroImg" src="assets/img/turbo/hero-m-800.webp" srcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" sizes="100vw" width="800" height="1000" alt="لافتة SM TURBO المضيئة ليلًا أمام مقر الورشة في باتنة" fetchpriority="high">
       </picture>
     </figure>
   </div>
