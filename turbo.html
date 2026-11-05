@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SM TURBO — دورة تكوين شاملة في التيربو، أسبوع واحد، في باتنة (دوران لافيراي)، بخبرة عملية تطبيقية تفوق 40 سنة.">
+<meta name="description" content="SM TURBO — دورة تكوين شاملة في التيربو، 10 أيام مع المبيت في الفندق، في باتنة (دوران لافيراي)، بخبرة عملية تطبيقية تفوق 40 سنة.">
 <meta name="theme-color" content="#000000">
 <title>SM TURBO | دورة التيربو الشاملة - باتنة</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='700' font-size='44' text-anchor='middle' fill='%23fff'%3ESM%3C/text%3E%3C/svg%3E">
@@ -12,8 +12,6 @@
 <!-- Fonts load without blocking first paint; system fonts show until they arrive. -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800&display=swap" rel="stylesheet"></noscript>
-<link rel="preload" as="image" href="assets/img/turbo/hero-m-800.webp" imagesrcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/img/turbo/hero-1200.webp" imagesrcset="assets/img/turbo/hero-1200.webp 1200w, assets/img/turbo/hero-2000.webp 2000w" imagesizes="(min-width: 1264px) 1200px, 100vw" media="(min-width: 768px)">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -37,22 +35,98 @@
 
 <main id="main">
 
-<section class="hero section--night" aria-labelledby="heroTitle">
-  <div class="wrap center">
-    <p class="eyebrow reveal">SM TURBO · باتنة</p>
-    <h1 id="heroTitle" class="reveal">احترف التيربو<br>في أسبوع</h1>
-    <p class="lead reveal">تدريب عملي 100% في باتنة، بخبرة تطبيقية تفوق 40 سنة.</p>
-    <p class="hero-date reveal">الدورة القادمة: <strong class="nowrap">7 نوفمبر 2026</strong></p>
-    <div class="hero-actions reveal">
-      <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
-      <a href="#program" class="link">شاهد البرنامج</a>
+<section class="hero hero--offer section--night" id="signup" aria-labelledby="heroTitle">
+  <div class="wrap-wide hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">SM TURBO · باتنة</p>
+      <h1 id="heroTitle" data-ad="h1">احترف التيربو<br>في 10 أيام</h1>
+      <p class="lead" data-ad="lead">تدريب عملي في باتنة، بخبرة تطبيقية تفوق 40 سنة.</p>
+      <ul class="chips" aria-label="ما تشمله الدورة">
+        <li>10 أيام</li>
+        <li>المبيت في الفندق</li>
+        <li>شهادة معتمدة</li>
+      </ul>
+      <p class="hero-date">الدورة القادمة: <strong class="nowrap" data-session>7 نوفمبر 2026</strong> · المقاعد محدودة</p>
     </div>
+    <form id="signupForm" class="signup-form signup-card" method="POST" target="hidden_iframe" novalidate>
+      <p class="signup-card-title">احجز مقعدك في أقل من دقيقة</p>
+      <div class="form-row">
+        <label for="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" autocomplete="name" enterkeyhint="next" required>
+        <span class="field-error" data-error-for="name"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">رقم الهاتف</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" enterkeyhint="send" placeholder="0X XX XX XX XX" required>
+        <span class="field-error" data-error-for="phone"></span>
+      </div>
+
+      <input type="hidden" name="course" value="دورة تكوين شاملة في التيربو والتجميل">
+
+      <details class="more">
+        <summary>أسئلة إضافية (اختياري)</summary>
+        <div class="more-inner">
+          <div class="form-row">
+            <label id="experienceLabel">مدة الخبرة</label>
+            <div class="choice-group" role="group" aria-labelledby="experienceLabel">
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="بدون خبرة">بدون خبرة</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="أقل من سنة">أقل من سنة</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="1 - 3 سنوات">1 - 3 سنوات</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="أكثر من 3 سنوات">أكثر من 3 سنوات</button>
+            </div>
+            <input type="hidden" id="experience" name="experience">
+            <span class="field-error" data-error-for="experience"></span>
+          </div>
+
+          <div class="form-row">
+            <label id="workedBeforeLabel">هل عملت من قبل في هذا المجال؟</label>
+            <div class="choice-group" role="group" aria-labelledby="workedBeforeLabel">
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="نعم">نعم</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="لا">لا</button>
+            </div>
+            <input type="hidden" id="workedBefore" name="workedBefore">
+            <span class="field-error" data-error-for="workedBefore"></span>
+          </div>
+
+          <div class="form-row">
+            <label id="hasCertificateLabel">هل أنت متحصل على شهادة من مركز تكوين؟</label>
+            <div class="choice-group" role="group" aria-labelledby="hasCertificateLabel">
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="نعم">نعم</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="لا">لا</button>
+            </div>
+            <input type="hidden" id="hasCertificate" name="hasCertificate">
+            <span class="field-error" data-error-for="hasCertificate"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" autocomplete="email" dir="ltr">
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">ملاحظات</label>
+            <textarea id="notes" name="notes" rows="2"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <button type="submit" id="submitBtn" class="btn btn-primary">إرسال</button>
+      <p class="signup-note">نتصل بك لتأكيد التفاصيل. تفضّل التواصل مباشرة؟</p>
+      <div class="contact-row">
+        <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%8A%D8%B1%D8%A8%D9%88" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>واتساب</span></a>
+        <a href="tel:+213563531042" class="btn btn-call"><span dir="ltr">0563 53 10 42</span></a>
+      </div>
+      <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+    </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" title="نتيجة إرسال النموذج" style="display:none;"></iframe>
   </div>
   <div class="wrap-wide hero-media">
     <figure>
       <picture>
         <source media="(min-width: 768px)" srcset="assets/img/turbo/hero-1200.webp 1200w, assets/img/turbo/hero-2000.webp 2000w" sizes="(min-width: 1264px) 1200px, 100vw" width="1200" height="675">
-        <img id="heroImg" src="assets/img/turbo/hero-m-800.webp" srcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" sizes="100vw" width="800" height="1000" alt="لافتة SM TURBO المضيئة ليلًا أمام مقر الورشة في باتنة" fetchpriority="high">
+        <img id="heroImg" src="assets/img/turbo/hero-m-800.webp" srcset="assets/img/turbo/hero-m-800.webp 800w, assets/img/turbo/hero-m-1200.webp 1200w" sizes="100vw" width="800" height="1000" alt="لافتة SM TURBO المضيئة ليلًا أمام مقر الورشة في باتنة" loading="lazy" decoding="async">
       </picture>
     </figure>
   </div>
@@ -98,7 +172,19 @@
   </div>
 </section>
 
-<section class="section section--mist" id="workshop" aria-labelledby="workshopTitle">
+<section class="section section--mist" id="hotel" aria-labelledby="hotelTitle">
+  <div class="wrap-wide">
+    <div class="feature feature--flip reveal">
+      <div>
+        <h2 id="hotelTitle" class="h2">المبيت في الفندق</h2>
+        <p class="lead">المبيت في الفندق متوفر للمتربصين، لتتفرغ للتعلم فقط.</p>
+      </div>
+      <figure><img src="assets/img/turbo/hotel-640.webp" srcset="assets/img/turbo/hotel-640.webp 640w, assets/img/turbo/hotel-1080.webp 1080w" sizes="(min-width: 900px) 560px, 100vw" width="640" height="800" loading="lazy" decoding="async" alt="غرفة الفندق المخصصة للمتربصين: سريران ومناشف نظيفة"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="workshop" aria-labelledby="workshopTitle">
   <div class="wrap-wide">
     <div class="wrap center head reveal">
       <h2 id="workshopTitle" class="h2">تتدرب داخل ورشة SM TURBO</h2>
@@ -113,11 +199,11 @@
   </div>
 </section>
 
-<section class="section" id="program" aria-labelledby="programTitle">
+<section class="section section--mist" id="program" aria-labelledby="programTitle">
   <div class="wrap">
     <div class="center head reveal">
       <h2 id="programTitle" class="h2">برنامج الدورة</h2>
-      <p class="lead">أسبوع واحد، تدريب عملي بالكامل.</p>
+      <p class="lead">10 أيام، تدريب عملي بالكامل.</p>
     </div>
     <ol class="days reveal">
       <li class="day"><span class="day-n latin">01</span><span class="day-t">تعلم التيربو: تفكيك وتركيب</span></li>
@@ -130,94 +216,24 @@
 
 <!-- Testimonials section (redesign-apple commit 2928824) returns once students agree to their videos being used. -->
 
-<section class="section section--mist" id="pricing" aria-labelledby="priceTitle">
+<section class="section" id="pricing" aria-labelledby="priceTitle">
   <div class="wrap">
     <div class="price-card reveal">
       <h2 id="priceTitle" class="h3">دورة التيربو الشاملة</h2>
       <!-- Price and deposit go here once confirmed: <p class="price">… <span class="price-unit">دج</span></p><p class="deposit">…</p> -->
-      <p class="deposit">الدورة القادمة: <span class="nowrap">7 نوفمبر 2026</span></p>
+      <p class="deposit">الدورة القادمة: <span class="nowrap" data-session>7 نوفمبر 2026</span></p>
       <ul class="includes">
-        <li>أسبوع واحد، تدريب عملي 100%</li>
+        <li>10 أيام، تدريب عملي 100%</li>
+        <li>المبيت في الفندق</li>
         <li>شهادة دولة معتمدة بشراكة مع المعهد العالي نيسي برو للتكوين</li>
         <li>باتنة، أمام محور دوران لافيراي</li>
       </ul>
-      <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+      <div class="cta-row">
+        <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+        <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%8A%D8%B1%D8%A8%D9%88" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>واتساب</span></a>
+      </div>
       <p class="call">للسعر والاستفسار، اتصل بنا: <a class="link" href="tel:+213563531042" dir="ltr">0563 53 10 42</a></p>
     </div>
-  </div>
-</section>
-
-<section class="section" id="signup" aria-labelledby="signupTitle">
-  <div class="wrap">
-    <div class="center head reveal">
-      <h2 id="signupTitle" class="h2">احجز مقعدك</h2>
-      <p class="lead">املأ النموذج، ونتصل بك لتأكيد التفاصيل.</p>
-    </div>
-
-    <form id="signupForm" class="signup-form reveal" method="POST" target="hidden_iframe" novalidate>
-      <div class="form-row">
-        <label for="name">الاسم الكامل *</label>
-        <input type="text" id="name" name="name" autocomplete="name" required>
-        <span class="field-error" data-error-for="name"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="phone">رقم الهاتف *</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required>
-        <span class="field-error" data-error-for="phone"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" autocomplete="email" dir="ltr">
-        <span class="field-error" data-error-for="email"></span>
-      </div>
-
-      <input type="hidden" name="course" value="دورة تكوين شاملة في التيربو والتجميل">
-
-      <div class="form-row">
-        <label id="experienceLabel">مدة الخبرة *</label>
-        <div class="choice-group" role="group" aria-labelledby="experienceLabel">
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="بدون خبرة">بدون خبرة</button>
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="أقل من سنة">أقل من سنة</button>
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="1 - 3 سنوات">1 - 3 سنوات</button>
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="أكثر من 3 سنوات">أكثر من 3 سنوات</button>
-        </div>
-        <input type="hidden" id="experience" name="experience" required>
-        <span class="field-error" data-error-for="experience"></span>
-      </div>
-
-      <div class="form-row">
-        <label id="workedBeforeLabel">هل عملت من قبل في هذا المجال؟ *</label>
-        <div class="choice-group" role="group" aria-labelledby="workedBeforeLabel">
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="نعم">نعم</button>
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="لا">لا</button>
-        </div>
-        <input type="hidden" id="workedBefore" name="workedBefore" required>
-        <span class="field-error" data-error-for="workedBefore"></span>
-      </div>
-
-      <div class="form-row">
-        <label id="hasCertificateLabel">هل أنت متحصل على شهادة من مركز تكوين؟ *</label>
-        <div class="choice-group" role="group" aria-labelledby="hasCertificateLabel">
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="نعم">نعم</button>
-          <button type="button" class="choice-btn" aria-pressed="false" data-value="لا">لا</button>
-        </div>
-        <input type="hidden" id="hasCertificate" name="hasCertificate" required>
-        <span class="field-error" data-error-for="hasCertificate"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="notes">ملاحظات إضافية</label>
-        <textarea id="notes" name="notes" rows="3"></textarea>
-      </div>
-
-      <button type="submit" id="submitBtn" class="btn btn-primary">إرسال</button>
-
-      <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
-    </form>
-
-    <iframe name="hidden_iframe" id="hidden_iframe" title="نتيجة إرسال النموذج" style="display:none;"></iframe>
   </div>
 </section>
 
@@ -233,7 +249,11 @@
       </div>
       <div class="faq-item" data-open="false">
         <button type="button" class="faq-question" aria-expanded="false">ما مدة الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>مدة الدورة أسبوع واحد فقط، مكثف وعملي بالكامل.</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>مدة الدورة 10 أيام، مكثفة وعملية بالكامل.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">هل يتوفر المبيت؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>نعم، المبيت في الفندق متوفر للمتربصين. اتصل بنا على 0563 53 10 42 لمعرفة التفاصيل.</p></div></div>
       </div>
       <div class="faq-item" data-open="false">
         <button type="button" class="faq-question" aria-expanded="false">أين تُقام الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
@@ -249,7 +269,7 @@
       </div>
       <div class="faq-item" data-open="false">
         <button type="button" class="faq-question" aria-expanded="false">كيف أسجل في الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-answer"><div class="faq-answer-inner"><p>عبر تعبئة نموذج التسجيل أعلاه، وسنتواصل معك لتأكيد التفاصيل.</p></div></div>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>اكتب اسمك ورقم هاتفك في نموذج التسجيل أعلى الصفحة، ونتصل بك لتأكيد التفاصيل.</p></div></div>
       </div>
     </div>
   </div>
@@ -257,13 +277,24 @@
 
 <section class="section section--night final" aria-labelledby="finalTitle">
   <div class="wrap center reveal">
-    <h2 id="finalTitle" class="h2">الدورة القادمة<br><span class="nowrap">7 نوفمبر</span></h2>
+    <h2 id="finalTitle" class="h2">الدورة القادمة<br><span class="nowrap" data-session>7 نوفمبر 2026</span></h2>
     <p class="lead">المقاعد محدودة، احجز مكانك الآن.</p>
-    <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+    <div class="cta-row">
+      <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+      <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%8A%D8%B1%D8%A8%D9%88" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>راسلنا على واتساب</span></a>
+    </div>
   </div>
 </section>
 
 </main>
+
+<div class="sticky-cta" id="stickyCta" hidden>
+  <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+  <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%8A%D8%B1%D8%A8%D9%88" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>واتساب</span></a>
+  <a href="tel:+213563531042" class="btn btn-call" aria-label="اتصل بنا: 0563 53 10 42">اتصل</a>
+</div>
+<a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%8A%D8%B1%D8%A8%D9%88" class="wa-float" target="_blank" rel="noopener" aria-label="راسلنا على واتساب"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+
 
 <footer class="site-footer">
   <div class="wrap-wide footer-inner">
@@ -274,6 +305,7 @@
       <a href="#pricing">الدورة</a>
       <a href="#faq">الأسئلة الشائعة</a>
       <a href="#signup">سجّل الآن</a>
+      <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%AA%D9%8A%D8%B1%D8%A8%D9%88" target="_blank" rel="noopener">واتساب</a>
       <a href="tel:+213563531042" dir="ltr">0563 53 10 42</a>
     </nav>
     <p class="footer-line">© 2026 SM TURBO — باتنة، أمام محور دوران لافيراي. جميع الحقوق محفوظة.</p>
@@ -281,6 +313,7 @@
 </footer>
 
 <script src="assets/script.js"></script>
+<script src="assets/ads.js"></script>
 <script src="assets/site.js"></script>
 </body>
 </html>

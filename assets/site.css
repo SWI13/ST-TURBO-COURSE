@@ -255,3 +255,73 @@ section[id] { scroll-margin-top: var(--header-h); }
 .course-card-desc { color: var(--ink-2); margin-block: var(--s1) var(--s3); max-width: 46ch; }
 .course-card .h3 { margin-block-start: 4px; }
 .about-text { max-width: 40ch; }
+
+/* Ad landing: offer + short form on the first screen (turbo.html) */
+.hero--offer { padding-block-start: var(--s5); }
+.hero-grid { display: grid; gap: var(--s4); align-items: center; }
+.hero--offer .hero-copy { text-align: start; }
+.hero--offer h1 { font-size: clamp(40px, 7vw, 80px); }
+.hero--offer .lead { margin-inline: 0; max-width: 32ch; }
+.hero--offer .hero-media { margin-block-start: var(--s6); }
+.chips { list-style: none; margin: var(--s3) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s1); }
+.chips li { padding: 6px 14px; border-radius: var(--pill); border: 1px solid rgba(245, 245, 247, 0.28); font-size: 14px; font-weight: 500; color: var(--night-ink); }
+.hero--offer .hero-date { margin-block-start: var(--s2); }
+@media (min-width: 900px) {
+  .hero--offer { padding-block-start: var(--s12); }
+  .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: var(--s12); }
+}
+
+.signup-card { background: var(--paper); color: var(--ink); border-radius: var(--radius); padding: var(--s3); gap: var(--s2); max-width: 520px; width: 100%; margin-inline: 0; }
+@media (min-width: 900px) { .signup-card { padding: var(--s4); justify-self: end; } }
+.signup-card-title { font-size: 20px; font-weight: 800; line-height: 1.4; }
+.signup-card .form-row label { font-size: 14px; }
+.signup-note { font-size: var(--fs-small); color: var(--ink-2); text-align: center; }
+.more { border-block: 1px solid var(--line); }
+.more summary { list-style: none; cursor: pointer; padding-block: 12px; font-size: 15px; font-weight: 600; color: var(--ink-2); display: flex; justify-content: space-between; align-items: center; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::after { content: "+"; font-size: 20px; line-height: 1; }
+.more[open] summary::after { content: "−"; }
+.more-inner { display: grid; gap: var(--s2); padding-block-end: var(--s2); }
+
+/* WhatsApp + call. WhatsApp keeps its own green so people recognise it at a glance. */
+.wa-icon { width: 20px; height: 20px; flex-shrink: 0; }
+.btn-wa { background: #25d366; color: #0b2e17; }
+.btn-wa:hover { background: #1ebe5b; }
+.btn-call { background: var(--ink); color: #fff; }
+.btn-call:hover { background: #000; }
+.section--night .btn-call { background: #333336; }
+.contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s1); }
+.contact-row .btn { min-height: 44px; padding-inline: 12px; font-size: 15px; }
+.cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s2); margin-block-start: var(--s4); }
+.cta-row .btn { margin: 0; min-width: 0; }
+.price-card .cta-row { margin-block-start: var(--s5); }
+.final .cta-row .btn { margin-block-start: 0; }
+
+.wa-float {
+  position: fixed; inset-inline-end: var(--s3); bottom: var(--s3); z-index: 40;
+  width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
+  background: #25d366; color: #fff; transition: transform 180ms var(--ease);
+}
+.wa-float:hover { transform: scale(1.06); }
+.wa-float .wa-icon { width: 30px; height: 30px; }
+
+/* Mobile: sticky bar at the bottom once the form is scrolled past */
+.sticky-cta {
+  position: fixed; inset-inline: 0; bottom: 0; z-index: 45;
+  display: flex; gap: var(--s1); padding: 10px var(--s2) calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.94); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+  border-block-start: 1px solid var(--line);
+  transform: translateY(110%); transition: transform 300ms var(--ease);
+}
+.sticky-cta.is-visible { transform: none; }
+.sticky-cta .btn { min-height: 46px; padding-inline: 14px; font-size: 15px; }
+.sticky-cta .btn-primary { flex: 1; }
+.sticky-cta[hidden] { display: none; }
+@media (max-width: 899px) {
+  body:has(.sticky-cta) .wa-float { display: none; }
+  body:has(.sticky-cta) .site-footer { padding-block-end: calc(var(--s5) + 72px); }
+}
+@media (min-width: 900px) { .sticky-cta { display: none !important; } }
+
+/* Visitors from an ad: no exits in the header, only the signup button */
+.from-ad .header-nav a:not(.btn) { display: none; }

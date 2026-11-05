@@ -192,7 +192,15 @@ function setupForm() {
     submitBtn.textContent = "جارٍ الإرسال...";
     message.textContent = "";
     message.className = "form-message";
+
+    // مصدر الزيارة (رابط الإعلان) يُضاف إلى عمود الملاحظات، ثم تعود الخانة كما كتبها الزائر
+    const notes = form.querySelector('#notes');
+    const typedNotes = notes ? notes.value : '';
+    if (notes && window.SIGNUP_SOURCE) {
+      notes.value = (typedNotes ? typedNotes + ' ' : '') + '[المصدر: ' + window.SIGNUP_SOURCE + ']';
+    }
     form.submit();
+    if (notes) notes.value = typedNotes;
 
     // إن لم يستجب الخادم، لا نترك الزر معطّلاً إلى الأبد
     timeoutId = window.setTimeout(() => {
@@ -213,6 +221,7 @@ function setupForm() {
     clearChoiceSelections(form);
     message.textContent = "تم إرسال بياناتك بنجاح! سنتواصل معك قريباً.";
     message.className = "form-message success";
+    if (typeof window.onSignupSuccess === 'function') window.onSignupSuccess();
   });
 }
 
@@ -226,6 +235,10 @@ function focusFirstInvalid(form) {
     ? firstInvalid.parentElement.querySelector('.choice-btn')
     : firstInvalid;
 
+  // الحقل داخل قسم "أسئلة إضافية" المطوي: نفتحه أولاً
+  const details = target && target.closest('details');
+  if (details) details.open = true;
+
   if (target) target.focus();
 }
 
@@ -238,6 +251,17 @@ function validateForm(form) {
       valid = false;
     }
   });
+
+  // أرقام جزائرية: 0XXXXXXXXX أو +213XXXXXXXXX، مع أو بدون مسافات
+  const phone = form.querySelector('#phone');
+  if (phone && phone.value.trim()) {
+    let digits = phone.value.replace(/\D/g, '');
+    if (digits.startsWith('213')) digits = '0' + digits.slice(3);
+    if (!/^0\d{8,9}$/.test(digits)) {
+      setFieldError(phone, "رقم الهاتف غير صحيح. مثال: 0563 53 10 42");
+      valid = false;
+    }
+  }
 
   const email = form.querySelector('#email');
   if (email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {

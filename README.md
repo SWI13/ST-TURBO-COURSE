@@ -16,6 +16,7 @@ has its own full landing page.
   and adds glass/glow effects, loaded in addition to `style.css`
 - `assets/courses.js` — the `COURSES` array driving the hub's course cards; add a
   course here (plus its own `<course>.html` page) to list a new one
+- `assets/ads.js` — Turbo ad landing settings (date, Meta Pixel, headline variants)
 - `assets/script.js` — shared behavior (nav, reveal-on-scroll, counters, FAQ/
   accordion, signup form) used by all pages
 - `apps-script/Code.gs` — code to paste into Google Apps Script (the backend) —
@@ -29,6 +30,19 @@ has its own full landing page.
 2. Add an entry to the `COURSES` array in `assets/courses.js` (name, description,
    `href` to the new page, meta labels, and a 4:5 image with its srcset and alt text).
 3. No other changes are needed — the hub's card grid is rendered from that array.
+
+## Running ads to the Turbo page
+
+Settings live at the top of `assets/ads.js`:
+
+- `nextSession`: the next session date, shown everywhere the page says "الدورة القادمة".
+- `metaPixelId`: paste the Meta Pixel ID to send PageView, and Lead once a signup is saved.
+- `variants`: hero headlines that match each ad. Link the ad to `turbo.html?v=hotel`,
+  `?v=cert` or `?v=beginner`; with no `v` the default headline shows.
+
+Add `utm_source`, `utm_campaign` and `utm_content` to the ad link: they are written into the
+"ملاحظات" column, so each signup shows which ad brought it. Visitors from an ad (utm or fbclid)
+see a header without exit links.
 
 ## One-time setup: connect the form to a Google Sheet (~5 minutes)
 
