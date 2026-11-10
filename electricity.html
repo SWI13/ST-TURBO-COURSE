@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SM ACADEMY: دورة سكانار وكهرباء السيارات في 10 أيام بباتنة. من قانون أوم والأفوميتر إلى قراءة المخططات، الكنترول، الحساسات، الأسيلوسكوب والسكانار (OBD).">
+<meta name="theme-color" content="#000000">
+<title>سكانار وكهرباء السيارات | SM ACADEMY باتنة</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23000'/%3E%3Ctext x='50' y='66' font-family='Arial' font-weight='700' font-size='44' text-anchor='middle' fill='%23fff'%3ESM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">تخطَّ إلى المحتوى</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap-wide header-inner">
+    <a href="index.html" class="logo" aria-label="SM ACADEMY: كل الدورات">
+      <img src="assets/img/sm-academy-logo.png" alt="SM ACADEMY" width="480" height="270" decoding="async" onerror="this.closest('.logo').classList.add('logo--nomark');this.remove();">
+      <span class="logo-fallback latin">SM ACADEMY</span>
+    </a>
+    <nav class="header-nav" aria-label="روابط الصفحة">
+      <a href="#program" class="hide-sm">البرنامج</a>
+      <a href="#tools" class="hide-sm">الأدوات</a>
+      <a href="#faq" class="hide-sm">الأسئلة</a>
+      <a href="#signup" class="btn btn-primary btn-sm">سجّل الآن</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero hero--offer section--night" id="signup" aria-labelledby="heroTitle">
+  <div class="wrap-wide hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">SM ACADEMY · باتنة</p>
+      <h1 id="heroTitle" data-ad="h1">احترف السكانار<br>وكهرباء السيارات</h1>
+      <p class="lead" data-ad="lead">من قانون أوم والأفوميتر، إلى الكنترول والحساسات والأسيلوسكوب والسكانار. تعلّم كيف تجد العطل بدل أن تبدّل القطع.</p>
+      <ul class="chips" aria-label="ما تشمله الدورة">
+        <li>10 أيام</li>
+        <li>نظري وتطبيقي</li>
+        <li>من الصفر</li>
+        <!-- Add once confirmed for this course: <li>المبيت في الفندق</li> <li>شهادة تأهيل</li> -->
+      </ul>
+      <p class="hero-date" data-session-row hidden>الدورة القادمة: <strong class="nowrap" data-session></strong> · المقاعد محدودة</p>
+      <p class="hero-date" data-session-empty>سجّل الآن ونتصل بك بموعد الدورة القادمة.</p>
+    </div>
+    <form id="signupForm" class="signup-form signup-card" method="POST" target="hidden_iframe" novalidate>
+      <p class="signup-card-title">احجز مقعدك في أقل من دقيقة</p>
+      <div class="form-row">
+        <label for="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" autocomplete="name" enterkeyhint="next" required>
+        <span class="field-error" data-error-for="name"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">رقم الهاتف</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" enterkeyhint="send" placeholder="0X XX XX XX XX" required>
+        <span class="field-error" data-error-for="phone"></span>
+      </div>
+
+      <input type="hidden" name="course" value="دورة سكانار وكهرباء السيارات">
+
+      <details class="more">
+        <summary>أسئلة إضافية (اختياري)</summary>
+        <div class="more-inner">
+          <div class="form-row">
+            <label id="experienceLabel">مدة الخبرة</label>
+            <div class="choice-group" role="group" aria-labelledby="experienceLabel">
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="بدون خبرة">بدون خبرة</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="أقل من سنة">أقل من سنة</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="1 - 3 سنوات">1 - 3 سنوات</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="أكثر من 3 سنوات">أكثر من 3 سنوات</button>
+            </div>
+            <input type="hidden" id="experience" name="experience">
+            <span class="field-error" data-error-for="experience"></span>
+          </div>
+
+          <div class="form-row">
+            <label id="workedBeforeLabel">هل عملت من قبل في الميكانيك أو الكهرباء؟</label>
+            <div class="choice-group" role="group" aria-labelledby="workedBeforeLabel">
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="نعم">نعم</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="لا">لا</button>
+            </div>
+            <input type="hidden" id="workedBefore" name="workedBefore">
+            <span class="field-error" data-error-for="workedBefore"></span>
+          </div>
+
+          <div class="form-row">
+            <label id="hasCertificateLabel">هل أنت متحصل على شهادة من مركز تكوين؟</label>
+            <div class="choice-group" role="group" aria-labelledby="hasCertificateLabel">
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="نعم">نعم</button>
+              <button type="button" class="choice-btn" aria-pressed="false" data-value="لا">لا</button>
+            </div>
+            <input type="hidden" id="hasCertificate" name="hasCertificate">
+            <span class="field-error" data-error-for="hasCertificate"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" autocomplete="email" dir="ltr">
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">ملاحظات</label>
+            <textarea id="notes" name="notes" rows="2"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <button type="submit" id="submitBtn" class="btn btn-primary">إرسال</button>
+      <p class="signup-note">نتصل بك لتأكيد التفاصيل. تفضّل التواصل مباشرة؟</p>
+      <div class="contact-row">
+        <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%B3%D9%83%D8%A7%D9%86%D8%A7%D8%B1%20%D9%88%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>واتساب</span></a>
+        <a href="tel:+213563531042" class="btn btn-call"><span dir="ltr">0563 53 10 42</span></a>
+      </div>
+      <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+    </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" title="نتيجة إرسال النموذج" style="display:none;"></iframe>
+  </div>
+  <div class="wrap-wide hero-media">
+    <figure class="scope" aria-label="شاشة أسيلوسكوب تعرض إشارتي حساس عمود المرفق وحساس عمود الكامة">
+      <svg id="heroImg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+        <defs>
+          <pattern id="scopeGrid" width="100" height="100" patternUnits="userSpaceOnUse">
+            <path d="M100 0H0V100" fill="none" stroke="#2a2a2d" stroke-width="2"/>
+            <path d="M20 50h-4M40 50h-4M60 50h-4M80 50h-4M50 20v-4M50 40v-4M50 60v-4M50 80v-4" stroke="#1f1f22" stroke-width="2"/>
+          </pattern>
+          <filter id="glow" x="-5%" y="-20%" width="110%" height="140%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect width="1200" height="900" fill="#08080a"/>
+        <rect width="1200" height="900" fill="url(#scopeGrid)"/>
+        <path d="M0 450H1200M600 0V900" stroke="#3a3a3e" stroke-width="2"/>
+        <!-- CH1: crank sensor, square wave with a missing-tooth gap -->
+        <path class="trace trace-1" pathLength="1" filter="url(#glow)" fill="none" stroke="#ffd60a" stroke-width="5" stroke-linejoin="round"
+          d="M0 360H30V220H70V360H110V220H150V360H190V220H230V360H270V220H310V360H350V220H390V360H510V220H550V360H590V220H630V360H670V220H710V360H750V220H790V360H830V220H870V360H910V220H950V360H990V220H1030V360H1070V220H1110V360H1200"/>
+        <!-- CH2: cam sensor, one wide pulse per turn -->
+        <path class="trace trace-2" pathLength="1" filter="url(#glow)" fill="none" stroke="#64d2ff" stroke-width="5" stroke-linejoin="round"
+          d="M0 700H420V560H640V700H1200"/>
+        <g font-family="ui-monospace, Consolas, monospace" font-size="30" font-weight="700">
+          <text x="260" y="190" fill="#ffd60a">CH1 · CKP</text>
+          <text x="260" y="530" fill="#64d2ff">CH2 · CMP</text>
+          <text x="940" y="770" text-anchor="end" fill="#6e6e73">2 ms/div</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="master" aria-labelledby="masterTitle">
+  <div class="wrap-wide">
+    <div class="wrap center head reveal">
+      <h2 id="masterTitle" class="h2">ماذا ستتعلم في الدورة</h2>
+      <p class="lead">أربع مهارات تجعل منك كهربائي سيارات يفهم ما يقيسه.</p>
+    </div>
+
+    <div class="feature reveal">
+      <div>
+        <h3 class="h2">الكهرباء والقياس</h3>
+        <p class="lead">الجهد والتيار والمقاومة، قانون أوم، واستعمال الأفوميتر والكلامب بثقة. تقيس، تقرأ الرقم، وتفهم معناه.</p>
+      </div>
+      <figure class="diagram">
+        <svg viewBox="0 0 400 500" role="img" aria-label="دائرة بسيطة: بطارية، فيوز، مفتاح ومصباح، مع قراءة الأفوميتر">
+          <rect width="400" height="500" fill="#0b0b0c"/>
+          <g fill="none" stroke="#f5f5f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M80 220V130H150M190 130H240M290 130H320V215M320 285V380H80V280"/>
+            <rect x="150" y="118" width="40" height="24" rx="6" stroke="#ff9f0a"/>
+            <path d="M240 130L282 104"/><circle cx="240" cy="130" r="5" fill="#f5f5f7"/><circle cx="290" cy="130" r="5" fill="#f5f5f7"/>
+            <circle cx="320" cy="250" r="35"/><path d="M296 226l48 48M344 226l-48 48"/>
+            <path d="M52 220h56M64 236h32M52 252h56M64 268h32" stroke-width="5"/>
+            <path d="M80 380v18M64 398h32M70 408h20M76 418h8"/>
+          </g>
+          <g font-family="ui-monospace, Consolas, monospace" font-weight="700">
+            <text x="112" y="214" font-size="22" fill="#ff453a">+</text>
+            <text x="170" y="98" font-size="16" fill="#ff9f0a" text-anchor="middle">FUSE</text>
+            <text x="200" y="60" font-size="26" fill="#a1a1a6" text-anchor="middle">U = R × I</text>
+            <rect x="120" y="430" width="160" height="48" rx="10" fill="#1c1c1e"/>
+            <text x="200" y="463" font-size="26" fill="#ffd60a" text-anchor="middle">12.6 V</text>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist" aria-label="قراءة المخططات الكهربائية">
+  <div class="wrap-wide">
+    <div class="feature feature--flip reveal">
+      <div>
+        <h3 class="h2">قراءة المخططات (الوايرينج)</h3>
+        <p class="lead">تفهم الرموز والألوان والكونيكتورات، وتتبع الدائرة من الفيوز إلى الأرضي. تطبيق على الريليه والإنارة والمارش ومراوح التبريد.</p>
+      </div>
+      <figure class="diagram">
+        <svg viewBox="0 0 400 500" role="img" aria-label="مخطط ريليه يشغّل مروحة التبريد، بأرقام الأطراف 30 و87 و85 و86">
+          <rect width="400" height="500" fill="#0b0b0c"/>
+          <rect x="70" y="150" width="200" height="200" rx="12" fill="none" stroke="#6e6e73" stroke-width="3" stroke-dasharray="10 8"/>
+          <g fill="none" stroke="#f5f5f7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="105" y="215" width="40" height="70" rx="4"/>
+            <path d="M125 215V110M125 285V400"/>
+            <path d="M225 110V200L190 250M225 270V300H320V330"/>
+            <circle cx="225" cy="270" r="5" fill="#f5f5f7"/>
+            <circle cx="320" cy="370" r="38"/>
+            <path d="M320 408V440M300 440h40M308 450h24M315 460h10"/>
+            <path d="M125 400v18M109 418h32M115 428h20M121 438h8"/>
+          </g>
+          <path d="M225 110H360" stroke="#ff453a" stroke-width="4"/>
+          <path d="M125 110H40" stroke="#ff453a" stroke-width="4"/>
+          <g font-family="ui-monospace, Consolas, monospace" font-weight="700" font-size="20">
+            <text x="240" y="140" fill="#ffd60a">30</text>
+            <text x="240" y="325" fill="#ffd60a">87</text>
+            <text x="85" y="205" fill="#ffd60a">86</text>
+            <text x="85" y="310" fill="#ffd60a">85</text>
+            <text x="320" y="380" fill="#f5f5f7" text-anchor="middle" font-size="30">M</text>
+            <text x="360" y="100" fill="#ff453a" text-anchor="end">+12V</text>
+            <text x="40" y="100" fill="#ff453a">IGN</text>
+            <text x="170" y="185" fill="#6e6e73" text-anchor="middle" font-size="16">RELAY</text>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="الكنترول والحساسات">
+  <div class="wrap-wide">
+    <div class="feature reveal">
+      <div>
+        <h3 class="h2">الكنترول والحساسات</h3>
+        <p class="lead">كيف يقرأ الكنترول (ECU) الكابتورات ويتحكم في الرشاشات. تعرف أسلاك المرجع والإشارة والأرضي، وتختبر كل حساس خطوة بخطوة.</p>
+      </div>
+      <figure class="diagram">
+        <svg viewBox="0 0 400 500" role="img" aria-label="الكنترول متصل بحساس ثلاثي الأسلاك: مرجع 5 فولت، إشارة، وأرضي">
+          <rect width="400" height="500" fill="#0b0b0c"/>
+          <rect x="30" y="110" width="150" height="280" rx="14" fill="#1c1c1e" stroke="#6e6e73" stroke-width="3"/>
+          <rect x="290" y="170" width="80" height="160" rx="12" fill="none" stroke="#f5f5f7" stroke-width="4"/>
+          <g fill="none" stroke-width="5" stroke-linecap="round">
+            <path d="M180 190H290" stroke="#ff453a"/>
+            <path d="M180 250H290" stroke="#ffd60a"/>
+            <path d="M180 310H290" stroke="#a1a1a6"/>
+          </g>
+          <g fill="none" stroke="#f5f5f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M120 150V170l-10 6 20 10-20 10 20 10-10 6V250H180"/>
+            <path d="M75 150h90"/>
+          </g>
+          <g font-family="ui-monospace, Consolas, monospace" font-weight="700">
+            <text x="105" y="90" font-size="24" fill="#a1a1a6" text-anchor="middle">ECU</text>
+            <text x="120" y="142" font-size="16" fill="#ff453a" text-anchor="middle">5V</text>
+            <text x="235" y="180" font-size="18" fill="#ff453a" text-anchor="middle">5V REF</text>
+            <text x="235" y="240" font-size="18" fill="#ffd60a" text-anchor="middle">SIGNAL</text>
+            <text x="235" y="300" font-size="18" fill="#a1a1a6" text-anchor="middle">GND</text>
+            <text x="330" y="360" font-size="18" fill="#f5f5f7" text-anchor="middle">TPS</text>
+            <rect x="110" y="425" width="180" height="48" rx="10" fill="#1c1c1e"/>
+            <text x="200" y="458" font-size="24" fill="#ffd60a" text-anchor="middle">0.5 → 4.5 V</text>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist" aria-label="السكانار والأسيلوسكوب">
+  <div class="wrap-wide">
+    <div class="feature feature--flip reveal">
+      <div>
+        <h3 class="h2">السكانار والأسيلوسكوب</h3>
+        <p class="lead">تقرأ بالسكانار رموز الأعطال والبيانات الحية، ثم تؤكد بالإشارة: رشاش، كويل، حساس دوران. تشخيص بالدليل، لا بالتخمين.</p>
+      </div>
+      <figure class="diagram">
+        <svg viewBox="0 0 400 500" role="img" aria-label="إشارة رشاش على الأسيلوسكوب مع رمز عطل">
+          <rect width="400" height="500" fill="#0b0b0c"/>
+          <g stroke="#2a2a2d" stroke-width="2">
+            <path d="M0 100H400M0 175H400M0 250H400M0 325H400M0 400H400M50 60V420M125 60V420M200 60V420M275 60V420M350 60V420"/>
+          </g>
+          <path filter="url(#glow)" fill="none" stroke="#ffd60a" stroke-width="5" stroke-linejoin="round"
+            d="M0 300H110V390H210L214 110L224 270L240 300H400"/>
+          <g font-family="ui-monospace, Consolas, monospace" font-weight="700">
+            <text x="20" y="45" font-size="18" fill="#ffd60a">INJECTOR · 20 V/div</text>
+            <text x="160" y="410" font-size="14" fill="#a1a1a6" text-anchor="middle">ON TIME</text>
+            <text x="232" y="100" font-size="14" fill="#a1a1a6">SPIKE</text>
+            <rect x="110" y="438" width="180" height="44" rx="10" fill="#1c1c1e"/>
+            <text x="200" y="468" font-size="22" fill="#ff453a" text-anchor="middle">DTC P0201</text>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="program" aria-labelledby="programTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <h2 id="programTitle" class="h2">برنامج الدورة</h2>
+      <p class="lead">10 أيام، كل يوم شرح ثم تطبيق.</p>
+    </div>
+    <ol class="days days--detail reveal">
+      <li class="day"><span class="day-n latin">01</span><span class="day-t">أساسيات الكهرباء<span class="day-d">الجهد، التيار، المقاومة وقانون أوم. الدوائر على التوالي والتوازي، والعناصر الخمسة لكل دائرة.</span></span></li>
+      <li class="day"><span class="day-n latin">02</span><span class="day-t">أدوات القياس<span class="day-d">الأفوميتر من الأساسيات إلى القياسات المتقدمة، الكلامب أمبيرمتر، ومدخل إلى الأسيلوسكوب.</span></span></li>
+      <li class="day"><span class="day-n latin">03</span><span class="day-t">قراءة المخططات وأعطال الأسلاك<span class="day-d">رموز الوايرينج. تلامس مع الموجب، تلامس مع الأرضي، مقاومة عالية، ودائرة مفتوحة.</span></span></li>
+      <li class="day"><span class="day-n latin">04</span><span class="day-t">الريليه والإنارة ومراوح التبريد<span class="day-d">المفتاح والريليه والترانزستور. دوائر الإنارة القديمة والحديثة، ومراوح بسرعة واحدة وبعدة سرعات.</span></span></li>
+      <li class="day"><span class="day-n latin">05</span><span class="day-t">البطارية والمارش والدينامو<span class="day-d">اختبار البطارية، تشخيص عدم الدوران وأعطال المارش والشحن، واختبار استنزاف البطارية.</span></span></li>
+      <li class="day"><span class="day-n latin">06</span><span class="day-t">كنترول المحرك (ECU)<span class="day-d">المدخلات والمخرجات، مكونات الكنترول من الداخل، مقسّم الجهد، Pull-up و Pull-down، وإشارة PWM.</span></span></li>
+      <li class="day"><span class="day-n latin">07</span><span class="day-t">الحساسات (الكابتورات)<span class="day-d">كيف تعمل: Hall، مغناطيسي، بيزو، مقاومة متغيرة. حساسات الضغط والوضع والحرارة، وخطوات تشخيص أسلاكها.</span></span></li>
+      <li class="day"><span class="day-n latin">08</span><span class="day-t">حساسات الدوران ونظام الحقن<span class="day-d">CKP و CMP و VSS، حساس الأكسجين والطرق. الحقن غير المباشر والمباشر (GDI) ورشاشاته.</span></span></li>
+      <li class="day"><span class="day-n latin">09</span><span class="day-t">تحليل الإشارات بالأسيلوسكوب<span class="day-d">إشارة الرشاشات وإشارة الإشعال (الكويل): كيف تبدو سليمة، وكيف يظهر العطل عليها.</span></span></li>
+      <li class="day"><span class="day-n latin">10</span><span class="day-t">السكانار (OBD) والتشخيص الشامل<span class="day-d">رموز الأعطال (DTC)، البيانات الحية و Readiness Monitors، ثم تشخيص كامل على سيارة من البداية إلى الإصلاح.</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--mist" id="tools" aria-labelledby="toolsTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <h2 id="toolsTitle" class="h2">أدوات ستتقن استعمالها</h2>
+    </div>
+    <ul class="tool-list reveal">
+      <li><strong>الأفوميتر</strong><span>Multimètre</span></li>
+      <li><strong>الكلامب أمبيرمتر</strong><span>Pince ampèremétrique</span></li>
+      <li><strong>الأسيلوسكوب</strong><span>Oscilloscope</span></li>
+      <li><strong>السكانار</strong><span>Scanner / Valise OBD</span></li>
+      <li><strong>المخططات الكهربائية</strong><span>Schémas électriques</span></li>
+      <li><strong>لمبة الاختبار</strong><span>Lampe témoin</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="forTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <h2 id="forTitle" class="h2">لمن هذه الدورة</h2>
+    </div>
+    <ul class="includes for-list reveal">
+      <li>مبتدئ يريد أن يبدأ في كهرباء السيارات من الصفر</li>
+      <li>ميكانيكي يريد أن يفهم الكهرباء والكنترول ولا يبقى يبدّل القطع</li>
+      <li>كهربائي يريد منهجية تشخيص واضحة، بالسكانار والأسيلوسكوب</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Photos of this course (workshop, cars, students) go here once taken. Reuse the .grid block from turbo.html. -->
+<!-- Testimonials go here once students agree. -->
+
+<section class="section section--mist" id="pricing" aria-labelledby="priceTitle">
+  <div class="wrap">
+    <div class="price-card reveal">
+      <h2 id="priceTitle" class="h3">دورة سكانار وكهرباء السيارات</h2>
+      <!-- Price and deposit go here once confirmed: <p class="price">… <span class="price-unit">دج</span></p><p class="deposit">…</p> -->
+      <p class="deposit" data-session-row hidden>الدورة القادمة: <span class="nowrap" data-session></span></p>
+      <ul class="includes">
+        <li>10 أيام، شرح وتطبيق كل يوم</li>
+        <li>من أساسيات الكهرباء إلى الأسيلوسكوب والسكانار</li>
+        <li>باتنة</li>
+        <!-- Add once confirmed: <li>المبيت في الفندق</li> <li>شهادة تأهيل من …</li> -->
+      </ul>
+      <div class="cta-row">
+        <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+        <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%B3%D9%83%D8%A7%D9%86%D8%A7%D8%B1%20%D9%88%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>واتساب</span></a>
+      </div>
+      <p class="call">للسعر والاستفسار، اتصل بنا: <a class="link" href="tel:+213563531042" dir="ltr">0563 53 10 42</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <div class="center head reveal">
+      <h2 id="faqTitle" class="h2">الأسئلة الشائعة</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">هل أحتاج خبرة سابقة في الكهرباء؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>لا. اليوم الأول يبدأ من الجهد والتيار وقانون أوم، وكل يوم يُبنى على الذي قبله.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">ما مدة الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>10 أيام. كل يوم فيه شرح ثم تطبيق بالأدوات.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">ما الفرق بين هذه الدورة ودورة التيربو؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>دورة التيربو تخص تصليح التيربو. هذه الدورة تخص كهرباء السيارة كلها: الأسلاك، البطارية والشحن، الكنترول، الحساسات والتشخيص. <a class="link" href="turbo.html">دورة التيربو</a></p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">هل أتعلم استعمال السكانار؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>نعم. اليوم العاشر مخصص للسكانار ونظام OBD: قراءة رموز الأعطال والبيانات الحية، ومتى تثق بالجهاز ومتى تؤكد بالقياس.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">أين تُقام الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>حضوريًا في باتنة. اتصل بنا على 0563 53 10 42 لمعرفة العنوان والتفاصيل.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button type="button" class="faq-question" aria-expanded="false">كيف أسجل في الدورة؟<span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>اكتب اسمك ورقم هاتفك في نموذج التسجيل أعلى الصفحة، ونتصل بك لتأكيد التفاصيل.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--night final" aria-labelledby="finalTitle">
+  <div class="wrap center reveal">
+    <h2 id="finalTitle" class="h2">اعرف العطل<br>قبل أن تبدّل القطعة</h2>
+    <p class="lead">سجّل الآن ونتصل بك بموعد الدورة القادمة.</p>
+    <div class="cta-row">
+      <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+      <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%B3%D9%83%D8%A7%D9%86%D8%A7%D8%B1%20%D9%88%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>راسلنا على واتساب</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta" id="stickyCta" hidden>
+  <a href="#signup" class="btn btn-primary">احجز مقعدك</a>
+  <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%B3%D9%83%D8%A7%D9%86%D8%A7%D8%B1%20%D9%88%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" class="btn btn-wa" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>واتساب</span></a>
+  <a href="tel:+213563531042" class="btn btn-call" aria-label="اتصل بنا: 0563 53 10 42">اتصل</a>
+</div>
+<a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%B3%D9%83%D8%A7%D9%86%D8%A7%D8%B1%20%D9%88%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" class="wa-float" target="_blank" rel="noopener" aria-label="راسلنا على واتساب"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+
+<footer class="site-footer">
+  <div class="wrap-wide footer-inner">
+    <a href="index.html" class="logo" aria-label="SM ACADEMY: كل الدورات"><img src="assets/img/sm-academy-logo.png" alt="SM ACADEMY" width="480" height="270" loading="lazy" decoding="async" onerror="this.closest('.logo').classList.add('logo--nomark');this.remove();"><span class="logo-fallback latin">SM ACADEMY</span></a>
+    <nav class="footer-links" aria-label="روابط التذييل">
+      <a href="index.html">كل الدورات</a>
+      <a href="#program">البرنامج</a>
+      <a href="#tools">الأدوات</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#signup">سجّل الآن</a>
+      <a href="https://wa.me/213563531042?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%20%D9%81%D9%8A%20%D8%AF%D9%88%D8%B1%D8%A9%20%D8%B3%D9%83%D8%A7%D9%86%D8%A7%D8%B1%20%D9%88%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" target="_blank" rel="noopener">واتساب</a>
+      <a href="tel:+213563531042" dir="ltr">0563 53 10 42</a>
+    </nav>
+    <p class="footer-line">© 2026 SM ACADEMY، باتنة. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+<script src="assets/elec.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

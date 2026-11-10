@@ -23,6 +23,17 @@ const COURSES = [
     imageAlt: 'فريق YR DETAILING أثناء تلميع وتنظيف سيارة داخل الورشة',
     imagePosition: '50% 42%',
   },
+  {
+    id: 'electricity',
+    name: 'سكانار وكهرباء السيارات',
+    description: 'من قانون أوم والأفوميتر إلى قراءة المخططات، الكنترول والحساسات، الأسيلوسكوب والسكانار (OBD). 10 أيام، شرح ثم تطبيق كل يوم.',
+    href: 'electricity.html',
+    meta: ['10 أيام', 'باتنة'],
+    image: 'assets/img/elec/card.svg',
+    imageSrcset: 'assets/img/elec/card.svg 640w',
+    imageAlt: 'شاشة أسيلوسكوب تعرض إشارة حساس عمود المرفق',
+    imagePosition: '50% 50%',
+  },
 ];
 
 function renderCourseCards() {

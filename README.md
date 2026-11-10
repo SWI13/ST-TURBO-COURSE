@@ -9,6 +9,8 @@ has its own full landing page.
 - `index.html` — course hub: renders course cards from `assets/courses.js`
 - `turbo.html` — Turbo (mechanics) course page
 - `assets/site.css` / `assets/site.js` — design system and header/hero motion shared by `index.html` and `turbo.html`
+- `electricity.html` — Scanner and car electricity course page (سكانار وكهرباء السيارات);
+  its diagrams are inline SVG, and its ad settings live in `assets/elec.js`
 - `detailing.html` — Detailing course page (neon theme)
 - `assets/style.css` — shared design tokens and components (buttons, cards, forms,
   accordion, course cards) used by every page
