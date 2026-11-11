@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800">
+  <defs>
+    <pattern id="g" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#1b222b" stroke-width="2"/></pattern>
+    <filter id="glow" x="-5%" y="-30%" width="110%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="640" height="800" fill="#07090c"/>
+  <rect width="640" height="800" fill="url(#g)"/>
+  <path d="M0 384H640M320 0V800" stroke="#2c3642" stroke-width="2"/>
+  <path d="M320 368v32M256 376v16M384 376v16M192 376v16M448 376v16M128 376v16M512 376v16M64 376v16M576 376v16" stroke="#2c3642" stroke-width="2"/>
+  <path filter="url(#glow)" fill="none" stroke="#ffc21a" stroke-width="6" stroke-linejoin="round" d="M0 300H24V170H64V300H104V170H144V300H184V170H224V300H344V170H384V300H424V170H464V300H504V170H544V300H584V170H624V300H640"/>
+  <path filter="url(#glow)" fill="none" stroke="#5bd3f5" stroke-width="6" stroke-linejoin="round" d="M0 560H208V440H392V560H640"/>
+  <g font-family="Consolas, 'Courier New', monospace" font-weight="700">
+    <rect x="24" y="24" width="150" height="40" fill="#ffc21a"/>
+    <text x="99" y="52" font-size="24" text-anchor="middle" fill="#07090c">CH1 CKP</text>
+    <rect x="186" y="24" width="150" height="40" fill="none" stroke="#5bd3f5" stroke-width="2"/>
+    <text x="261" y="52" font-size="24" text-anchor="middle" fill="#5bd3f5">CH2 CMP</text>
+    <text x="24" y="100" font-size="22" fill="#6b7785">2 ms/div</text>
+    <text x="284" y="152" font-size="18" text-anchor="middle" fill="#8a96a3">MISSING TOOTH</text>
+    <path d="M224 136v-14h120v14" fill="none" stroke="#8a96a3" stroke-width="2"/>
+  </g>
+</svg>

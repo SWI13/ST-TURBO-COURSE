@@ -1,81 +1,81 @@
-# SM Courses — Landing Pages
+# SM ACADEMY — Website
 
-Static site (Arabic, RTL) for SM's training courses, with signup forms that write
-directly into a Google Sheet. `index.html` is a course-selection hub; each course
-has its own full landing page.
+Static site (Arabic, RTL) for SM ACADEMY's training courses in Batna, live at
+https://smacademy.online/. Plain HTML, CSS and JavaScript: no build step, no dependencies.
+Signup forms write directly into a Google Sheet.
 
-## Files
+## Pages
 
-- `index.html` — course hub: renders course cards from `assets/courses.js`
-- `turbo.html` — Turbo (mechanics) course page
-- `assets/site.css` / `assets/site.js` — design system and header/hero motion shared by `index.html` and `turbo.html`
-- `electricity.html` — Scanner and car electricity course page (سكانار وكهرباء السيارات);
-  its diagrams are inline SVG, and its ad settings live in `assets/elec.js`
-- `detailing.html` — Detailing course page (neon theme)
-- `assets/style.css` — shared design tokens and components (buttons, cards, forms,
-  accordion, course cards) used by every page
-- `assets/detailing.css` — Detailing-only theme: overrides the shared color tokens
-  and adds glass/glow effects, loaded in addition to `style.css`
-- `assets/courses.js` — the `COURSES` array driving the hub's course cards; add a
-  course here (plus its own `<course>.html` page) to list a new one
-- `assets/ads.js` — Turbo ad landing settings (date, Meta Pixel, headline variants)
-- `assets/script.js` — shared behavior (nav, reveal-on-scroll, counters, FAQ/
-  accordion, signup form) used by all pages
-- `apps-script/Code.gs` — code to paste into Google Apps Script (the backend) —
-  shared by every course's signup form; each form sends its own `course` value
-  into the same sheet
+- `index.html` — home: hero, the three courses, about, why SM ACADEMY, upcoming sessions
+- `courses.html` — all courses side by side (duration, level, certificate, place)
+- `about.html` — the academy, its way of teaching, its location
+- `turbo.html` — Turbo course page (also the landing page for Turbo ads)
+- `electricity.html` — Scanner and car electricity course page (diagrams are inline SVG)
+- `detailing.html` — Detailing course page (bright theme, with YR DETAILING)
 
-## Adding a new course
+## Assets
 
-1. Duplicate `turbo.html` or `detailing.html` as a starting point for the new
-   course page, and give its signup form's hidden `course` input a distinct value.
-2. Add an entry to the `COURSES` array in `assets/courses.js` (name, description,
-   `href` to the new page, meta labels, and a 4:5 image with its srcset and alt text).
-3. No other changes are needed — the hub's card grid is rendered from that array.
+- `assets/data.js` — **the file to edit for everyday changes**: phone, WhatsApp number,
+  the courses list, next session dates, Meta Pixel IDs and ad headlines
+- `assets/app.css` — the whole design system: tokens, components, the three course themes
+  (`data-theme="turbo" | "elec" | "detail"` on `<html>`), motion
+- `assets/app.js` — behaviour: menu, scroll reveals, FAQ, course cards and session list
+  (drawn from `data.js`), ad variants and tracking, the signup form
+- `assets/img/` — photos (WebP) and `og/` share images
+- `apps-script/Code.gs` — code pasted into Google Apps Script (the form's backend)
 
-## Running ads to the Turbo page
+## Everyday changes
 
-Settings live at the top of `assets/ads.js`:
+**Set or change the next session date.** In `assets/data.js`, on the course:
 
-- `nextSession`: the next session date, shown everywhere the page says "الدورة القادمة".
+```js
+session: { iso: '2026-11-21', day: '21', month: 'نوفمبر 2026', note: 'المقاعد محدودة' },
+```
+
+`iso` is what the site trusts: the day after it, every page stops showing the date and
+goes back to "سجّل الآن ونتصل بك بموعد الدورة القادمة" by itself. Use `session: null`
+when there is no date yet.
+
+**Add a course.**
+
+1. Copy an entry in the `courses` array of `assets/data.js`; give it a new `id`, `href`,
+   texts, `specs` and a 4:5 image.
+2. Duplicate the closest course page, set `<html data-course="the-new-id">`, and give the
+   form's hidden `course` input its own value (that is the name written in the sheet).
+3. Add the page to the header and footer links of each page, and to `sitemap.xml`.
+
+The home page cards, the courses page and the sessions list pick the new course up from
+the array.
+
+## Running ads to a course page
+
+Settings live on the course in `assets/data.js`:
+
 - `metaPixelId`: paste the Meta Pixel ID to send PageView, and Lead once a signup is saved.
 - `variants`: hero headlines that match each ad. Link the ad to `turbo.html?v=hotel`,
-  `?v=cert` or `?v=beginner`; with no `v` the default headline shows.
+  `?v=cert` or `?v=beginner` (electricity: `?v=beginner`, `?v=diag`, `?v=ecu`); with no `v`
+  the default headline shows.
 
 Add `utm_source`, `utm_campaign` and `utm_content` to the ad link: they are written into the
-"ملاحظات" column, so each signup shows which ad brought it. Visitors from an ad (utm or fbclid)
-see a header without exit links.
+"ملاحظات" column, so each signup shows which ad brought it. Visitors from an ad (utm or
+fbclid) see a header without exit links.
 
-## One-time setup: connect the form to a Google Sheet (~5 minutes)
+## The signup form and the Google Sheet
 
-1. Go to [sheets.google.com](https://sheets.google.com) and create a new blank spreadsheet.
-   Name it e.g. "Turbo Academy — Signups".
-2. In the sheet, open **Extensions → Apps Script**.
-3. Delete any placeholder code in the editor, then paste the contents of
-   `apps-script/Code.gs` from this project.
-4. Click **Deploy → New deployment**.
-   - Click the gear icon next to "Select type" and choose **Web app**.
-   - Description: anything, e.g. "Turbo form handler".
-   - Execute as: **Me**.
-   - Who has access: **Anyone**.
-   - Click **Deploy**.
-5. Google will ask you to authorize the script (it's your own script accessing
-   your own sheet) — approve it.
-6. Copy the **Web app URL** it gives you (ends in `/exec`).
-7. Open `assets/script.js` in this project and replace:
-   ```js
-   const APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
-   ```
-   with your copied URL.
-8. Open `index.html` in a browser and submit the form once to test. A new row
-   should appear in the Google Sheet within a couple of seconds.
+Every course page posts to the same Apps Script web app (`formUrl` in `assets/data.js`);
+each form sends its own `course` value. To connect a new sheet:
 
-**Note:** every time you change the Apps Script code, you must create a
-**new deployment** (or use "Manage deployments → Edit → New version") for the
-change to take effect on the live URL.
+1. Create a spreadsheet at [sheets.google.com](https://sheets.google.com), then open
+   **Extensions → Apps Script**.
+2. Replace the placeholder code with the contents of `apps-script/Code.gs`.
+3. **Deploy → New deployment**, type **Web app**, execute as **Me**, access **Anyone**.
+4. Approve the authorization, copy the web app URL (it ends in `/exec`) and paste it as
+   `formUrl` in `assets/data.js`.
+5. Submit a form once to test: a new row should appear within a couple of seconds.
 
-## Running locally
+Every time the Apps Script code changes, create a **new deployment** (or "Manage
+deployments → Edit → New version") for the change to reach the live URL.
 
-Just open `index.html` in a browser — no build step or server required.
-To publish it, host the folder anywhere that serves static files (GitHub Pages,
-Netlify, a plain web host, etc.).
+## Running locally and publishing
+
+Open `index.html` in a browser. To publish, push to `main`: Vercel deploys it.
